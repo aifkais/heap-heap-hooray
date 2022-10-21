@@ -39,6 +39,8 @@ public class DialogueManager : MonoBehaviour
     DisplayNextSentence();
   }
 
+
+
   public void DisplayNextSentence(){
     if(sentences.Count == 0){
       EndDialogue();
