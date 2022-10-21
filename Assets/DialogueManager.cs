@@ -10,7 +10,7 @@ public class DialogueManager : MonoBehaviour
   public TMP_Text nameText;
   public TMP_Text dialogueText;
 
-  public Animator animator;
+  public static Animator animator;
 
 
     private Queue<string> sentences;
@@ -19,6 +19,13 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
+    }
+
+
+    [RuntimeInitializeOnLoadMethod]
+    static void OnRuntimeMethodLoad(Dialogue dialogue)
+    {
+         Debug.Log("After Scene is loaded and game is running");
     }
 
   public void StartDialogue(Dialogue dialogue)
