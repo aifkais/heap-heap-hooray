@@ -42,7 +42,20 @@ public class DialogueManager : MonoBehaviour
     }
     DisplayNextSentence();
   }
+ public void StartFirstDialogue(Dialogue dialogue)
+  {
+    
+    animator.SetBool("Start", true);
 
+    nameText.text = dialogue.name;
+
+    sentences.Clear();
+
+    foreach (string sentence in dialogue.sentences){
+      sentences.Enqueue(sentence);
+    }
+    DisplayNextSentence();
+  }
 
 
   public void DisplayNextSentence(){
@@ -66,6 +79,7 @@ public class DialogueManager : MonoBehaviour
 
   void EndDialogue(){
     animator.SetBool("IsOpen", false);
+   
     
   }
 }

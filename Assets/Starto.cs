@@ -1,22 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Starto : MonoBehaviour
+[System.Serializable]
+public class Starto
 {
+[TextArea(3,10)]
+public string name;
+public string[] sentences;
 
 
-  
 
-
-    // Start is called before the first frame update
-
- 
-    
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

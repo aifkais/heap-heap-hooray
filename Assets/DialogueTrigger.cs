@@ -12,15 +12,11 @@ public class DialogueTrigger : MonoBehaviour
     }
 
     public void TriggerFirst(){
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        
+        FindObjectOfType<DialogueManager>().StartFirstDialogue(dialogue);
     }
 
-   [RuntimeInitializeOnLoadMethod]
-    static void OnRuntimeMethodLoad()
-    {
-       
-         Debug.Log("After Scene is loaded and game is running");
-    }
+
 
 
 }
