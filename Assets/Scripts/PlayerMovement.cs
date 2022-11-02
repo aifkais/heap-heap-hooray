@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     // Components
     Rigidbody2D rb;
@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (inputHorizontal !=0 || inputVertical !=0)
+        if (inputHorizontal != 0 || inputVertical != 0)
         {
             if (inputHorizontal != 0 && inputVertical != 0)
             {
@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
 
             rb.velocity = new Vector2(inputHorizontal, inputVertical).normalized * walkSpeed;
 
-            if (inputHorizontal > 0 )
+            if (inputHorizontal > 0)
             {
                 ChangeAnimationState(PLAYER_WALK_RIGHT);
             }
@@ -86,3 +86,4 @@ public class PlayerController : MonoBehaviour
         currentState = newState;
     }
 }
+
