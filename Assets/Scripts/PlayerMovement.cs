@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     float inputHorizontal;
     float inputVertical;
 
+    private PickUp pickUp;
+
     // Animations and states
     Animator animator;
     string currentState;
@@ -28,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         animator = gameObject.GetComponent<Animator>();
+        pickUp = gameObject.GetComponent<PickUp>();
+        pickUp.Direction = new Vector2(0, -1);
     }
 
     // Update is called once per frame
