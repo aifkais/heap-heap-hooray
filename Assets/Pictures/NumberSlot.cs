@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class NumberSlot : MonoBehaviour , IDropHandler
 {
 
-
+    
 
     //1. Bedingung. Zur Ueberpruefung ob ObjektName gleich ArrayName ist 
     private string [] rightstring = new string [] {"Nummer","Nummer (1)","Nummer (2)","Nummer (3)","Nummer (4)", 
@@ -20,7 +20,7 @@ public class NumberSlot : MonoBehaviour , IDropHandler
     private bool [] rightbool = new bool [] {false,false,false,false,false, // Wenn 1.Bdng[i] und 2.Bdng[i] erfuellt sind -> rightbool[i] = true
                                                 false,false,false,false,false, // Wenn alle rightbool[i] auf true -> Weiterkommen
                                                 false,false,false,false,false };         
-
+     bool truetrue = false; // Wenn alle booleans in oben genannten booleanArray "rightbool" true sind -> wird "truetrue" true
 
    public void OnDrop(PointerEventData eventData){
     
@@ -28,6 +28,7 @@ public class NumberSlot : MonoBehaviour , IDropHandler
         eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
         //Debug.Log(eventData.pointerDrag.transform.position.x); // beim Loslassen der NummerObjekte die X Koordinate anzeigenlassen
         //Debug.Log(eventData.pointerDrag.transform.position.y); // beim Loslassen der NummerObjekte die Y Koordinate anzeigenlassen
+
         
     }
     for (int i= 0 ;i < 15; i ++){
@@ -35,14 +36,36 @@ public class NumberSlot : MonoBehaviour , IDropHandler
         &&eventData.pointerDrag.transform.position.x <= rightx1[i]
         &&eventData.pointerDrag.transform.position.x >= rightx1[i]-1)
         {
-         Debug.Log("Gleich");
+         Debug.Log(rightbool[i]);
          rightbool[i] = true;
-        }
+        
+    }
     }
     
+    alltrue(rightbool);
+    
+    if(truetrue== true){
+        Debug.Log("truetrue true");
+    } else{
+    Debug.Log("truetrue not true");
+    }
+
+       
         
    }
 
+    public void alltrue(bool[] boolarray )
+    {
+        for(int i = 0 ; i < 15 ; i++)
+        {
+           
+           if(boolarray[13]== true){
+            Debug.Log("Hallo"); // SystemPint
+            truetrue = true; 
+            }
+        }
+    
+    }
   
 
       public float getXAxis(){

@@ -25,24 +25,7 @@ public class DialogueManager : MonoBehaviour
     }
   
   
-
-
-
-  public void StartDialogue(Dialogue dialogue)
-  {
-    
-    animator.SetBool("IsOpen", true);
-
-    nameText.text = dialogue.name;
-
-    sentences.Clear();
-
-    foreach (string sentence in dialogue.sentences){
-      sentences.Enqueue(sentence);
-    }
-    DisplayNextSentence();
-  }
- public void StartFirstDialogue(Dialogue dialogue)
+public void StartFirstDialogue(Dialogue dialogue) // Aller aller erster Dialog wird in die TextBox transferiert
   {
     
     animator.SetBool("Start", true);
@@ -56,6 +39,23 @@ public class DialogueManager : MonoBehaviour
     }
     DisplayNextSentence();
   }
+
+
+  public void StartDialogue(Dialogue dialogue) 
+  {
+    Debug.Log("Gleich");
+    animator.SetBool("IsOpen", true);
+
+    nameText.text = dialogue.name;
+
+    sentences.Clear();
+
+    foreach (string sentence in dialogue.sentences){
+      sentences.Enqueue(sentence);
+    }
+    DisplayNextSentence();
+  }
+ 
 
 
   public void DisplayNextSentence(){

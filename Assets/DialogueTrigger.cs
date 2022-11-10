@@ -8,10 +8,11 @@ public class DialogueTrigger : MonoBehaviour
 
 
     public void TriggerDialogue(){
+        
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 
-    public void TriggerFirst(){
+    public void TriggerFirst(){ // Allererster 
         
         FindObjectOfType<DialogueManager>().StartFirstDialogue(dialogue);
     }
