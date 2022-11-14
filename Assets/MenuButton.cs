@@ -2,24 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NGButton : MonoBehaviour
+public class MenuButton : MonoBehaviour
 {
-
-[SerializeField] MenuButtonController menuButtonController;
+	[SerializeField] MenuButtonController menuButtonController;
 	[SerializeField] Animator animator;
 	[SerializeField] AnimatorFunctions animatorFunctions;
 	[SerializeField] int thisIndex;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        if(menuButtonController.index == thisIndex)
+		if(menuButtonController.index == thisIndex)
 		{
 			animator.SetBool ("selected", true);
 			if(Input.GetAxis ("Submit") == 1){
