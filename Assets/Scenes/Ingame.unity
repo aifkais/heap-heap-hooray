@@ -266,6 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59908ef43db8a0d43a438285501d7aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  terminal: {fileID: 1785621756}
 --- !u!114 &302517606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1342,7 +1343,7 @@ GameObject:
   - component: {fileID: 1785621755}
   - component: {fileID: 1785621757}
   m_Layer: 0
-  m_Name: Kasten
+  m_Name: Terminal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

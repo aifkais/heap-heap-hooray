@@ -15,7 +15,7 @@ public class TerminalController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I) && player.GetComponent<PlayerMovement>().getIsNearTerminal())
         {
             if (isOpened)
             {
