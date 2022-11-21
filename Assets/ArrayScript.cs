@@ -6,6 +6,8 @@ public class ArrayScript : MonoBehaviour
 {
 
     public GameObject [] myArrays = new GameObject[8];
+    private int[] mainArray = new int[8];
+    public int randomZahl;
 
    public Sprite eins;
     public Sprite zwei;
@@ -22,10 +24,13 @@ public class ArrayScript : MonoBehaviour
     {
         
         for(int i = 0; i <myArrays.Length; i++){
+        randomZahl =  Random.Range(0, 10);  // Generiert eine zufällige Zahl zwischen 0-9
+        myArrays[i].GetComponent<Attributes>().wert= randomZahl; 
 
-        myArrays[i].GetComponent<Attributes>().wert= Random.Range(1, 10);
-        Debug.Log(myArrays[i].GetComponent<Attributes>().wert); 
-        if(myArrays[i].GetComponent<Attributes>().wert==0){
+        mainArray[i] = randomZahl; // Zufallszahl wird in IntArray zugefügt
+
+    
+        if(myArrays[i].GetComponent<Attributes>().wert==0){ // Bilder werden aktuallisiert
             myArrays[i].GetComponent<Image>().sprite = nurr;
         }
         if(myArrays[i].GetComponent<Attributes>().wert==1){
@@ -62,6 +67,9 @@ public class ArrayScript : MonoBehaviour
 
     }
 
+    public void metomethod (int index ){
+        
+    }
 
 
     // Update is called once per frame

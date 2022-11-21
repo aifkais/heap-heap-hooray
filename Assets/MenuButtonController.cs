@@ -38,6 +38,12 @@ public class MenuButtonController : MonoBehaviour {
 						index = 6;
 	}else if(index==8&&Input.GetAxis ("Jump")>0)
 						index = 0;
-	}
+	
 
+
+
+	if(index==0&&Input.GetAxis ("Jump")>0){
+	//metomethod( 0)					
+	}
+}
 }
