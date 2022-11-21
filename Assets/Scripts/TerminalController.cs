@@ -8,6 +8,8 @@ public class TerminalController : MonoBehaviour
     [SerializeField] public GameObject Terminal;
     public bool isOpened;
 
+    private Vector3 playerPosition;
+
     void Start()
     {
         Terminal.SetActive(false);
@@ -15,13 +17,13 @@ public class TerminalController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I) && player.GetComponent<PlayerMovement>().getIsNearTerminal())
+        if (Input.GetKeyDown(KeyCode.I))
         {
             if (isOpened)
             {
                 CloseTerminal();
             }
-            else
+            else if (!isOpened && player.GetComponent<PlayerMovement>().getIsNearTerminal())
             {
                 OpenTerminal();
             }
@@ -30,15 +32,15 @@ public class TerminalController : MonoBehaviour
 
     public void OpenTerminal()
     {
+        playerPosition = player.transform.position;
         Terminal.SetActive(true);
-        Time.timeScale = 0f;
         isOpened = true;
     }
 
     public void CloseTerminal()
     {
+        player.transform.position = playerPosition;
         Terminal.SetActive(false);
-        Time.timeScale = 1f;
         isOpened = false;
     }
 }

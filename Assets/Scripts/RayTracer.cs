@@ -18,7 +18,6 @@ public class RayTracer : MonoBehaviour
     {
         Vector3 direction = _player.position;
         float dist = Vector3.Distance(this.transform.position, _player.transform.position);
-        Debug.Log(dist);
         if (dist < 2)
         {
             Debug.DrawLine(this.transform.position, direction, Color.green);
