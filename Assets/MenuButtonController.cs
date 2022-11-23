@@ -7,8 +7,10 @@ public class MenuButtonController : MonoBehaviour {
 	// Use this for initialization
 	public int index;
 	[SerializeField] bool keyDown;
+
 	[SerializeField] int maxIndex;
 	public AudioSource audioSource;
+	public ArrayScript arrayScript;
 
 	void Start () {
 		audioSource = GetComponent<AudioSource>();
@@ -29,21 +31,34 @@ public class MenuButtonController : MonoBehaviour {
 				}
 				keyDown = true;
 			}
-		}else{
+	}else if(index==2&&Input.GetAxis ("Jump")!=0){
+		if(!keyDown){
+		index = 3;
+		keyDown = true;	
+		}
+					
+	}else if(index==5&&Input.GetAxis ("Jump")!=0){
+		if(!keyDown){
+		index = 6;
+		keyDown = true;	
+		}
+	}else if(index==8&&Input.GetAxis ("Jump")!=0){
+		if(!keyDown){
+		index = 0;
+		keyDown = true;	
+		}
+	}else if(Input.GetAxis ("Jump")!=0){
+		if(!keyDown){
+		arrayScript.metomethod1(index);
+		keyDown= true;	
+		}
+					
+	}else{
 			keyDown = false;
 		}
-	if(index==2&&Input.GetAxis ("Jump")>0){
-						index = 3;
-	}else if(index==5&&Input.GetAxis ("Jump")>0){
-						index = 6;
-	}else if(index==8&&Input.GetAxis ("Jump")>0)
-						index = 0;
+
 	
-
-
-
-	if(index==0&&Input.GetAxis ("Jump")>0){
-	//metomethod( 0)					
-	}
+	
+	
 }
 }
