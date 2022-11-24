@@ -10,7 +10,7 @@ public class Attributes : MonoBehaviour
     public int ywert = 1;
     public int index  = 1;
     public int nextNode = 1;
-    public bool isActive = 0;
+    public bool isActive = true;
 
 
 
