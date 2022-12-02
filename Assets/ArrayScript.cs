@@ -6,19 +6,14 @@ public class ArrayScript : MonoBehaviour
 {
 
     public GameObject [] myArrays = new GameObject[7];
+    public  GameObject [] arrayAnzeige = new GameObject[7];
     private int[] mainArray = new int[7];
+    public Sprite weiss;
+    
     public int platzhalter;
     public int randomZahl;
-    public Sprite eins;
-    public Sprite zwei;
-    public Sprite drei;
-    public Sprite vier;
-    public Sprite fünf;
-    public Sprite sechs;
-    public Sprite sieben;
-    public Sprite acht;
-    public Sprite neun;
-    public Sprite nurr;
+    public Sprite[] spritos = new Sprite[10];
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +29,34 @@ public class ArrayScript : MonoBehaviour
         
     }
 
-    public void metomethod1 (int index ){
+
+    public void heapinArray(int züge){ // Die Letzte ArrayKugel wird in die Anzeige hinzugefügt
+       
+        int x = 7-züge;
+
+        int y = züge-1;
+        
+        for(int i = 0; i <spritos.Length; i++){
+            if(mainArray[0] == i){
+                arrayAnzeige[y].GetComponent<Image>().sprite = spritos[i];
+                
+            }
+        }
+
+
+            platzhalter = mainArray[x];
+            mainArray[x] = mainArray [0];
+            mainArray [0] = platzhalter;
+            
+            
+            updatepic();
+            
+       
+
+    }
+
+
+    public void changearraypos (int index ){ //Tauscht die ArrayPositionen
         
 
         if(index == 0){
@@ -75,38 +97,16 @@ public class ArrayScript : MonoBehaviour
         }
     }
 
-    public void updatepic(){
+
+
+    public void updatepic(){// Die Sprites der ArrayKugeln werden entsprechend der ArrayWerte aktuallisiert
         for(int i = 0; i <mainArray.Length; i++){
-        if(mainArray[i]==0){ // Bilder werden aktuallisiert
-            myArrays[i].GetComponent<Image>().sprite = nurr;
+            for (int e = 0 ; e <spritos.Length; e++){
+                if(mainArray[i]==e){ 
+                myArrays[i].GetComponent<Image>().sprite = spritos[e];
         }
-        if(mainArray[i]==1){
-            myArrays[i].GetComponent<Image>().sprite = eins;
-        }
-        if(mainArray[i]==2){
-            myArrays[i].GetComponent<Image>().sprite = zwei;
-        }
-        if(mainArray[i]==3){
-            myArrays[i].GetComponent<Image>().sprite = drei;
-        }
-        if(mainArray[i]==4){
-            myArrays[i].GetComponent<Image>().sprite = vier;
-        }
-        if(mainArray[i]==5){
-            myArrays[i].GetComponent<Image>().sprite = fünf;
-        }
-        if(mainArray[i]==6){
-            myArrays[i].GetComponent<Image>().sprite = sechs;
-        }
-        if(mainArray[i]==7){
-            myArrays[i].GetComponent<Image>().sprite = sieben;
-        }
-        if(mainArray[i]==8){
-            myArrays[i].GetComponent<Image>().sprite = acht;
-        }
-        if(mainArray[i]==9){
-            myArrays[i].GetComponent<Image>().sprite = neun;
-        }
+            }
+
         }
     }
 

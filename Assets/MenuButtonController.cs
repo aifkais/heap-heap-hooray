@@ -12,6 +12,9 @@ public class MenuButtonController : MonoBehaviour {
 	public AudioSource audioSource;
 	public ArrayScript arrayScript;
 
+	int züge=0;
+	int züge2 = 0;
+
 	void Start () {
 		audioSource = GetComponent<AudioSource>();
 	}
@@ -25,7 +28,7 @@ public class MenuButtonController : MonoBehaviour {
 						index++;
 					}
 				} else if(Input.GetAxis ("Horizontal") > 0){
-					if(index > 0&&index !=3&&index != 6){
+					if(index > 0&&index !=3&&index != 6&&index !=züge){
 						index --; 
 					}
 				}
@@ -44,21 +47,31 @@ public class MenuButtonController : MonoBehaviour {
 		}
 	}else if(index==8&&Input.GetAxis ("Jump")!=0){
 		if(!keyDown){
-		index = 0;
+		if(züge ==1 || züge==4){
+			züge++;
+			
+		}
+		züge++;
+		züge2++;
+		index = 0+züge;
+		arrayScript.heapinArray(züge2);	
 		keyDown = true;	
+		
 		}
 	}else if(Input.GetAxis ("Jump")!=0){
 		if(!keyDown){
-		arrayScript.metomethod1(index);
-		keyDown= true;	
+		arrayScript.changearraypos(index);
+		keyDown= true;
+		
 		}
 					
 	}else{
 			keyDown = false;
-		}
-
-	
-	
-	
+	}
 }
+
+
+
+
+
 }

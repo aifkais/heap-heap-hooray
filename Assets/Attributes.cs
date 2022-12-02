@@ -9,20 +9,22 @@ public class Attributes : MonoBehaviour
     public int xwert = 1;
     public int ywert = 1;
     public int index  = 1;
-    public int nextNode = 1;
+    public Attributes next = null;
     public bool isActive = true;
 
 
+    public Attributes (int wert, int xwert, int ywert, int index, bool isActive , Attributes next){
+        this.wert = wert;
+        this.xwert = xwert;
+        this.ywert = ywert;
+        this.index = index;
+        this.isActive = isActive;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //changepic();
+        this.next =next;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
+    
+
+
 }
