@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class ArrayScript : MonoBehaviour
 {
+
+    private TextMeshProUGUI textMeshProUGUI;
 
     public GameObject [] myArrays = new GameObject[7];
     public  GameObject [] arrayAnzeige = new GameObject[7];
@@ -23,6 +26,9 @@ public class ArrayScript : MonoBehaviour
         myArrays[i].GetComponent<Attributes>().wert= randomZahl; 
 
         mainArray[i] = randomZahl; // Zufallszahl wird in IntArray zugefügt
+
+        GameManager.instance.Text[i]=mainArray[i].toString();
+
         }
         updatepic();
         
@@ -105,6 +111,7 @@ public class ArrayScript : MonoBehaviour
                 if(mainArray[i]==e){ 
                 myArrays[i].GetComponent<Image>().sprite = spritos[e];
         }
+        GameManager.instance.Text[i]=mainArray[i].toString();
             }
 
         }
