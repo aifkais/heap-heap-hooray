@@ -16,7 +16,7 @@ public class PickUp : MonoBehaviour
             if (itemHolding)
             {
                 itemHolding.transform.position = transform.position + Direction;
-                itemHolding.transform.parent = null;
+                itemHolding.transform.parent = GameObject.Find("BoxParent").transform;
                 if (itemHolding.GetComponent<Rigidbody2D>())
                     itemHolding.GetComponent<Rigidbody2D>().simulated = true;
                 itemHolding = null;

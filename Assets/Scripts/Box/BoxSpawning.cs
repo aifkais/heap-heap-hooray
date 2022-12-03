@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class BoxSpawning : MonoBehaviour
 {
-    public GameObject objectToSpawn;
-    public Transform boxParent;
-    public Transform dropArea;
-    public float radius;
+    [SerializeField] private GameObject objectToSpawn;
+    [SerializeField] private Transform boxParent;
+    [SerializeField] private Transform dropArea;
+    [SerializeField] private float radius;
     
-    private int[] array = { 1, 2, 3, 4, 5, 6, 10, 11 };
-    private Transform currentBox;
+    private int[] unsortetdList = { 1, 2, 3, 4, 5, 6, 10, 11 };
+    private GameObject currentBox;
 
     void Start()
     {
@@ -19,23 +20,25 @@ public class BoxSpawning : MonoBehaviour
 
     IEnumerator InitiateSpawn()
     {
-        for (int i = 0; i < array.Length; i++)
+        for (int i = 0; i < unsortetdList.Length; i++)
         {
             Instantiate(objectToSpawn, transform.position, objectToSpawn.transform.rotation, boxParent);
             selectBox(i);
+            currentBox.transform.GetComponent<Box>().setBoxValue(unsortetdList[i]);
+            currentBox.transform.GetChild(0).Find("BoxValueText").gameObject.GetComponent<TextMeshPro>().text = "" + unsortetdList[i];
             yield return StartCoroutine(SpawnBox(randomPoint(), 1f));
         }
     }
 
     IEnumerator SpawnBox(Vector2 finalPos, float time)
     {
-        Vector2 startingPos = currentBox.position;
+        Vector2 startingPos = currentBox.transform.position;
         
         float elapsedTime = 0;
 
         while (elapsedTime < time)
         {
-            currentBox.position = Vector2.Lerp(startingPos, finalPos, (elapsedTime / time));
+            currentBox.transform.position = Vector2.Lerp(startingPos, finalPos, (elapsedTime / time));
             elapsedTime += Time.deltaTime;
             yield return null;
         }
@@ -43,7 +46,7 @@ public class BoxSpawning : MonoBehaviour
 
     private void selectBox(int index)
     {
-        currentBox = boxParent.GetChild(index);
+        currentBox = boxParent.GetChild(index).gameObject;
     }
 
     private Vector2 randomPoint()
