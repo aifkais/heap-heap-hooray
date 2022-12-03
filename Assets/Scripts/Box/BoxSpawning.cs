@@ -10,7 +10,7 @@ public class BoxSpawning : MonoBehaviour
     [SerializeField] private Transform dropArea;
     [SerializeField] private float radius;
     
-    private int[] unsortetdList = { 1, 2, 3, 4, 5, 6, 10, 11 };
+    private int[] unsortetdList = { 1, 9, 3, 4, 5, 6, 10, 11 };
     private GameObject currentBox;
 
     void Start()
