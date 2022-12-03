@@ -25,20 +25,7 @@ public class DialogueManager : MonoBehaviour
     }
   
   
-public void StartFirstDialogue(Dialogue dialogue) // Aller aller erster Dialog wird in die TextBox transferiert
-  {
-    
-    animator.SetBool("Start", true);
 
-    nameText.text = dialogue.name;
-
-    sentences.Clear();
-
-    foreach (string sentence in dialogue.sentences){
-      sentences.Enqueue(sentence);
-    }
-    DisplayNextSentence();
-  }
 
 
   public void StartDialogue(Dialogue dialogue) 

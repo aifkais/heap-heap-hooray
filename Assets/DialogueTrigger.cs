@@ -12,10 +12,8 @@ public class DialogueTrigger : MonoBehaviour
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 
-    public void TriggerFirst(){ // Allererster 
-        
-        FindObjectOfType<DialogueManager>().StartFirstDialogue(dialogue);
-    }
+
+
 
 
 

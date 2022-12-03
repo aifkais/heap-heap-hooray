@@ -7,6 +7,7 @@ public class TextBoxTrigger : MonoBehaviour
 
     [SerializeField] bool keyDown;
     public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +19,14 @@ public class TextBoxTrigger : MonoBehaviour
     {
         if(Input.GetAxis ("Jump")!=0){
 		if(!keyDown){
+
+            
 		animator.SetBool("IsOpen", true);
 		keyDown = true;	
         
-		}
+		}else {
+            keyDown= false;
+        }
     }
 }
 }
