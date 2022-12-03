@@ -12,7 +12,7 @@ public class ArrayScript : MonoBehaviour
     public  GameObject [] arrayAnzeige = new GameObject[7];
     private int[] mainArray = new int[7];
     public Sprite weiss;
-    
+    // 
     public int platzhalter;
     public int randomZahl;
     public Sprite[] spritos = new Sprite[10];
