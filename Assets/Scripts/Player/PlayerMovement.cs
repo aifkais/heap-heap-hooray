@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
     float inputVertical;
 
     private PickUp pickUp;
-    private bool isNearTerminal = false;
 
     // Animations and states
     Animator animator;
@@ -42,8 +41,6 @@ public class PlayerMovement : MonoBehaviour
     {
         inputHorizontal = Input.GetAxisRaw("Horizontal");
         inputVertical = Input.GetAxisRaw("Vertical");
-
-        CheckTerminal();
     }
 
     void FixedUpdate()
@@ -93,32 +90,6 @@ public class PlayerMovement : MonoBehaviour
 
         // Update current state
         currentState = newState;
-    }
-
-    private void CheckTerminal()
-    {
-        Vector3 direction = terminal.transform.position;
-        float dist = Vector3.Distance(transform.position, terminal.transform.position);
-        if (dist < 2)
-        {
-            Debug.DrawLine(transform.position, direction, Color.red);
-            isNearTerminal = true;
-        }
-        else
-        {
-            isNearTerminal = false;
-        }
-    }
-
-    public bool getIsNearTerminal()
-    {
-        return isNearTerminal;
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawSphere(terminal.transform.position, 0.05f);
     }
 }
 
