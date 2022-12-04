@@ -1185,7 +1185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 752959250}
   dialogueText: {fileID: 1482743322}
-  textBoxTrigger: {fileID: 0}
+  textBoxTrigger: {fileID: 865948739}
   animator: {fileID: 1301852827}
   textArray:
   - name: Gigo

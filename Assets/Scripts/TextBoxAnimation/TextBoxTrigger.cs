@@ -6,7 +6,7 @@ public class TextBoxTrigger : MonoBehaviour
 {
 
     [SerializeField] bool keyDown;
-    [SerializeField] bool textFieldUp = false;
+    
     public Animator animator;
     public GameObject [] Texte;
     public DialogueTrigger dialogueTrigger;
@@ -25,7 +25,7 @@ public class TextBoxTrigger : MonoBehaviour
         if(Input.GetAxis ("Jump")!=0){
 		    if(!keyDown){
 
-            textFieldUp = true;
+            
             FindObjectOfType<DialogueManager>().StartDialogue(textIndex);
         
 		    keyDown = true;	
@@ -35,8 +35,6 @@ public class TextBoxTrigger : MonoBehaviour
             keyDown= false;
         }
 }
-public void textFieldDown(){
-    textFieldUp = false;
-}
+
     
 }
