@@ -1187,7 +1187,7 @@ MonoBehaviour:
   textBoxTrigger: {fileID: 865948739}
   animator: {fileID: 1301852827}
   textArray:
-  - name: Gigo
+  - name: Player
     sentences:
     - Jo
     - Jo Jo
@@ -1201,8 +1201,9 @@ MonoBehaviour:
     - Einfach PlayMode verlassen
     - "Und auf dann auf Dialogue Manager in Text Array, im ersten Array alle Elemente
       l\xF6schen"
+    - "Und nart\xFCrlich niemanden erz\xE4hlen"
     - Ahmand ist ein ganz Lieber <3 <3
-  - name: Gigo2
+  - name: Player2
     sentences:
     - sdfsafd
     - weqrwqerat
