@@ -675,7 +675,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyDown: 0
-  textFieldUp: 0
   animator: {fileID: 1301852827}
   Texte: []
   dialogueTrigger: {fileID: 0}
@@ -1190,22 +1189,26 @@ MonoBehaviour:
   textArray:
   - name: Gigo
     sentences:
-    - 'Hallo '
-    - 2
-    - 3324
-    - sadfh
-    - djgfdjfdgh
-    - asdfaheth
-    - kfghfdjsr
-    - sfdgsjtrssfgar
+    - Jo
+    - Jo Jo
+    - "Willst du einen guten Joke h\xF6ren?"
+    - ...
+    - Ahmad hat das programmiert
+    - "Spa\xDF"
+    - "Spa\xDF"
+    - "Spa\xDF"
+    - "Bitte diesen ganzen Text sofort l\xF6schen"
+    - Einfach PlayMode verlassen
+    - "Und auf dann auf Dialogue Manager in Text Array, im ersten Array alle Elemente
+      l\xF6schen"
+    - Ahmand ist ein ganz Lieber <3 <3
   - name: Gigo2
     sentences:
-    - 'GIgo
-
-'
-    - werw
-    - qetrq
+    - sdfsafd
     - weqrwqerat
+    - sadfsgfasdhfgeh
+    - fdghsdfgh
+    - shdsfhsdfh
   - name: 
     sentences: []
   - name: 
