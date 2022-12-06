@@ -9,9 +9,10 @@ public class DialogueManager : MonoBehaviour
 {
   public TMP_Text nameText;
   public TMP_Text dialogueText;
+  public TextBoxTrigger textBoxTrigger;
 
   public Animator animator;
-
+  public Dialogue [] textArray = new Dialogue [50];
 
   private Queue<string> sentences;
   
@@ -28,16 +29,16 @@ public class DialogueManager : MonoBehaviour
 
 
 
-  public void StartDialogue(Dialogue dialogue) 
+  public void StartDialogue(int textIndex) 
   {
     Debug.Log("Gleich");
     animator.SetBool("IsOpen", true);
 
-    nameText.text = dialogue.name;
+    nameText.text = textArray[textIndex].name;
 
     sentences.Clear();
 
-    foreach (string sentence in dialogue.sentences){
+    foreach (string sentence in textArray[textIndex].sentences){
       sentences.Enqueue(sentence);
     }
     DisplayNextSentence();
@@ -65,6 +66,7 @@ public class DialogueManager : MonoBehaviour
   }
 
   void EndDialogue(){
+    
     animator.SetBool("IsOpen", false);
    
     

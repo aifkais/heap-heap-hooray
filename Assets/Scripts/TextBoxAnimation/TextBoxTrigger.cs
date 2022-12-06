@@ -6,7 +6,11 @@ public class TextBoxTrigger : MonoBehaviour
 {
 
     [SerializeField] bool keyDown;
+    
     public Animator animator;
+    public GameObject [] Texte;
+    public DialogueTrigger dialogueTrigger;
+    public int textIndex = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -17,16 +21,20 @@ public class TextBoxTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if(Input.GetAxis ("Jump")!=0){
-		if(!keyDown){
+		    if(!keyDown){
 
             
-		animator.SetBool("IsOpen", true);
-		keyDown = true;	
+            FindObjectOfType<DialogueManager>().StartDialogue(textIndex);
         
-		}else {
+		    keyDown = true;	
+        
+		    }
+        }else {
             keyDown= false;
         }
-    }
 }
+
+    
 }
