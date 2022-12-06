@@ -5,8 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class SettingsMenu : MonoBehaviour
 {
-    public void BackToMenu()
+    public void SetFullscreen(bool isFullscreen)
     {
-        SceneManager.LoadScene("Menu");
+           Screen.fullScreen = isFullscreen;
     }
+
+    public void fullScreen()
+    { Debug.Log( "fullscreen");
+
+    }
+    public void SetQuality(int qualityIndex)
+    {
+        QualitySettings.SetQualityLevel(qualityIndex);
+    }
+     public void BackToMenu()
+    {
+         SceneManager.LoadScene("Menu");
+    }
+
 }
