@@ -31,10 +31,10 @@ public class DialogueManager : MonoBehaviour
 
   public void StartDialogue(int textIndex) 
   {
-    Debug.Log("Gleich");
+    
     animator.SetBool("IsOpen", true);
 
-    nameText.text = textArray[textIndex].name;
+    nameText.text = textArray[textIndex].npcName;
 
     sentences.Clear();
 

@@ -7,6 +7,7 @@ using UnityEngine;
 public class Dialogue 
 {
     public string name;
+    public string npcName;
 
     [TextArea(3,10)]
 

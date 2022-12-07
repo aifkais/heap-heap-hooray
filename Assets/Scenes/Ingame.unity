@@ -302,6 +302,141 @@ MonoBehaviour:
   index: 0
   next: {fileID: 0}
   isActive: 0
+--- !u!1 &217837479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 217837480}
+  - component: {fileID: 217837482}
+  - component: {fileID: 217837481}
+  m_Layer: 5
+  m_Name: Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &217837480
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217837479}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 691687545}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -563.6843, y: 46.30841}
+  m_SizeDelta: {x: 1318.6821, y: 256.7131}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &217837481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217837479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Test Dialog
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 70
+  m_fontSizeBase: 70
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &217837482
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217837479}
+  m_CullTransparentMesh: 1
 --- !u!1 &248852863
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,7 +657,7 @@ Transform:
   m_Children:
   - {fileID: 1178215097}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &302517603
 Rigidbody2D:
@@ -1125,6 +1260,207 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 621977048}
   m_CullTransparentMesh: 1
+--- !u!1 &691687544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 691687545}
+  - component: {fileID: 691687548}
+  - component: {fileID: 691687547}
+  - component: {fileID: 691687546}
+  m_Layer: 5
+  m_Name: DialogueBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &691687545
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691687544}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1460513209}
+  - {fileID: 217837480}
+  - {fileID: 1333624096}
+  m_Father: {fileID: 721300094}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -1674}
+  m_SizeDelta: {x: 2571.338, y: 700.1287}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &691687546
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691687544}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9676b8b360b4af1439a151a181df62bc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &691687547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691687544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 42eca095ca1a15441becff5df7c37773, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &691687548
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691687544}
+  m_CullTransparentMesh: 1
+--- !u!1 &721300090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 721300094}
+  - component: {fileID: 721300093}
+  - component: {fileID: 721300092}
+  - component: {fileID: 721300091}
+  m_Layer: 5
+  m_Name: DBCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &721300091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721300090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &721300092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721300090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &721300093
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721300090}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &721300094
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721300090}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 691687545}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &851040953
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,7 +1553,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 83.363, y: 0, z: 0}
 --- !u!1 &854641156
 GameObject:
@@ -1479,8 +1815,143 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &895054347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 895054348}
+  - component: {fileID: 895054350}
+  - component: {fileID: 895054349}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &895054348
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895054347}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1333624096}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &895054349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895054347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Continue
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 60
+  m_fontSizeBase: 60
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &895054350
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895054347}
+  m_CullTransparentMesh: 1
 --- !u!1 &1003596067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,6 +2028,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003596067}
   m_CullTransparentMesh: 1
+--- !u!1 &1123566086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1123566089}
+  - component: {fileID: 1123566088}
+  - component: {fileID: 1123566087}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1123566087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123566086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1123566088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123566086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1123566089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123566086}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1123892177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1649,7 +2188,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1126437141
 GameObject:
@@ -1765,6 +2304,322 @@ Transform:
   m_Children: []
   m_Father: {fileID: 302517599}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1197558389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1197558391}
+  - component: {fileID: 1197558390}
+  m_Layer: 0
+  m_Name: DialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1197558390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197558389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 447c5c06982d0cc4c86f3e6c7bf687e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 1460513210}
+  dialogueText: {fileID: 217837481}
+  textBoxTrigger: {fileID: 1564062013}
+  animator: {fileID: 691687546}
+  textArray:
+  - name: Tag1 Patrik 1
+    npcName: Patrik
+    sentences:
+    - Willkommen zu deiner ersten Schicht bei uns im DHL!
+    - "Ich bin der Patrik und ich bin\r\nhier um dir deine Rolle in unserer Firma
+      zu erkl\xE4ren."
+    - "Wie du wei\xDFt, ist deine Aufgabe Pakete f\xFCr den Weiterversand zu sortieren,
+      aber keine Sorge, das Sortiersystem ist nicht nur nahezu vollautomatisch, sondern
+      auch einfach zu bedienen!"
+    - "Hier komm n\xE4her, ich zeige dir, wie es\r\nfunktioniert!"
+  - name: Tag1 Patrik 2
+    npcName: Patrik
+    sentences:
+    - "Wie du siehst, habe ich schon links 5 Pakete f\xFCr dich bereit gelegt."
+    - "Nat\xFCrlich ist dies nur ein Probelauf, wenn du anf\xE4ngst hier richtig
+      zu arbeiten, werden nicht nur mehr Pakete, sondern auch einige Sonderf\xE4lle
+      bei deiner Sortierstation eintreffen."
+    - Wie schon gesagt ist das Sortiersystem selbst nahezu vollautomatisch, daher
+      ist deine derzeitige Aufgabe, die linkstehenden Pakete in die Maschine zu packen.
+    - "Ein zus\xE4tzlicher Teil deines Trainings ist das manuelle Bedienen im Falle
+      eines Fehlers, wenn zum Beispiel ein Paket eine sonderbare Eigenschaft besitzt,
+      womit die Maschine nicht klarkommt."
+    - Aber mach dir deswegen keine Sorgen, ich bringe es dir zeitnah bei. Genug geredet!
+    - Jetzt kannst du anfangen die Pakete in den Eingabe port zu legen, die Reihenfolge
+      ist egal.
+    - "Und sobald du fertig bist, geh zum Display und klicke auf den Startknopf,
+      um das Wunder der Technik in Aktion zu sehen.\r"
+  - name: Tag1 Patrik 3
+    npcName: Patrik
+    sentences:
+    - ...
+    - ...nunja, erinnerst du dich noch, als ich dir gesagt habe, dass dir das manuelle
+      bedienen zeitnah beigebracht wird?
+    - "Die Zeit ist jetzt gekommen! Geh zur\xFCck zum Display und ich zeig dir, wie
+      alles funktioniert."
+    - "Die Zeit ist jetzt gekommen! Geh zur\xFCck zum Display und ich zeig dir, wie
+      alles funktioniert."
+    - Im manuellen Modus muss der Maschinen-interne Heapsort selbst angewendet werden...
+      zumindest steht das in der Bedienungsanleitung.
+    - Was hier auch steht ist, dass die Pakete, die du zuvor in den Eingabe port
+      geschmissen hast, jetzt auch auf dem Display angezeigt werden, und dass du
+      auch diese auf die Knoten des Heapsort-Baum legen kannst.
+    - 'Warte... hier wurde auch etwas Handschriftlich hingeschrieben:'
+    - "\u201CNach CSTM UD113.77B: Wenn im Manu-Mode: Pakete werden beim ausw\xE4hlen
+      im Baum oder Array jeweils farblich markiert, f\xFCr verbesserte \xFCbersicht
+      -Gru\xDF Steffen\u201D"
+  - name: Tag1 Patrik 4
+    npcName: Patrik
+    sentences:
+    - "Ich bin mir nicht sicher, was genau mit \u201CHeapsort\u201D gemeint ist,
+      aber was ich wei\xDF ist, dass in dieser 1300 Seiten Bedienungsanleitung etwas
+      dazu stehen muss!"
+    - "Fang schon mal an die Pakete auf den \xE4h... Baum... zu schieben. Ich werde
+      dir gleich erkl\xE4ren, wie es weiter geht."
+  - name: Tag1 Patrik 5
+    npcName: Patrik
+    sentences:
+    - AH! Du bist schon fertig?!
+    - "...Ich meine, nat\xFCrlich bist du das, meine Lehrf\xE4higkeit ist schlie\xDFlich
+      un\xFCbertroffen. Manchmal ist meine Genialit\xE4t fast ...be\xE4ngstigend."
+    - Nun, denn ich habe den Hersteller kontaktiert und ich bin mir nicht ganz sicher,
+      wann ein Monteur vorbeikommen wird, um die Maschine zu reparieren, da ich immer
+      noch nicht an der Warteschleife vorbeigekommen bin.
+    - "Also wirst du wohl in n\xE4herer Zukunft die Pakete manuell sortieren m\xFCssen,
+      aber keine Sorge, ich werde daf\xFCr in deiner Akte notieren, dass deine Arbeit
+      ausreichend war."
+  - name: Tag1 clippy tutmodi
+    npcName: clippy tutmodi
+    sentences:
+    - "Wie ich sehe, versuchen sie den Heapsort zu verstehen, ben\xF6tigen sie Hilfe?"
+    - Die Pakete sind unsortiert auf den Knotenpunkten verteilt, was sie auch auf
+      dem Output oben links in der Ecke sehen.
+    - "Um dies zu \xE4ndern empfehle ich ihnen den Max-Heap anzuwenden, um einen
+      Max-Heap zu erreichen, sollte der \xFCbergeordnete Knoten immer gr\xF6\xDFer
+      oder gleich den untergeordneten Knoten sein"
+    - "Da in diesem Beispiel der \xFCbergeordnete Knoten [KNOTEN1] kleiner ist als
+      der untergeordnete Knoten [KNOTEN2], werden sie vertauscht, um einen Max-Heap
+      zu bilden."
+    - "Klicken Sie nun bitte auf beide Knoten, um diese zu tauschen, bitte beachten
+      Sie aber, da aufgrund von Hardware Technischen Gr\xFCnden nur direkt miteinander
+      verbundene Knoten ausgetauscht werden k\xF6nnen."
+    - "Wie Sie sehen, ist [KNOTEN2] als \xFCbergeordneter Knoten kleiner als die
+      untergeordnete [KNOTEN4], also tauscht man beide wieder aus."
+    - "Wiederholen Sie diese Schritte bis das Array oben Links geordnet ist. Die
+      Simulation ist nun beendet und Sie k\xF6nnen mit Ihrer Arbeit beginnen."
+  - name: Tag2 Patrik 1
+    npcName: Patrik
+    sentences: []
+  - name: Tag2 Patrik 1
+    npcName: Patrik
+    sentences:
+    - Guten Morgen! Ich hoffe, dass du ausgeschlafen hast, denn heute wird es nicht
+      so gelassen wie gestern.
+    - Nachdem die Sortiermaschine gestern hochgegangen ist, sind wir nicht nur im
+      Verzug, sondern Management sitzt mir auch noch im Nacken!
+    - "Was bedeutet, dass wir (und mit wir meine ich dich) anfangen m\xFCssen, gr\xF6\xDFere
+      Mengen an Paketen zu sortieren."
+    - "Ich wei\xDF jetzt, was du denkst: \u201CAber es ist erst mein zweiter Tag\"
+      oder \u201CIch wei\xDF doch gar nicht, wie das Sortieren \xFCberhaupt erst
+      funktioniert\u201D oder was auch immer du noch sagen m\xF6chtest, ich will
+      nichts davon h\xF6ren."
+    - "Mach dir aber nicht allzu viele Sorgen, denn ich habe gestern die Anleitung
+      nochmals \xFCberflogen und kann dir daher so grob sagen, was du machen musst,
+      um deine Arbeit abzuschlie\xDFen."
+    - Ich werde daher mein Bestes tun, hier rum zu stehen und dir zuzuschauen.
+    - "Ich m\xF6chte dich aber warnen!"
+    - "Noch hast du Zeit mir gro\xDFartig Fragen zu stellen, aber wenn du morgen
+      oder \xFCbermorgen zu lange brauchst, um die Pakete zu sortieren, weil du mir
+      alle 10 Sekunden eine Frage stellst, kann es dazu kommen dass dir das vom Firmeninternen
+      Punktekonto abgezogen wird!"
+    - "Was genau das f\xFCr Konsequenzen hat, bin ich mir nicht ganz sicher, aber
+      wenn du Mitarbeiter des Monats sein m\xF6chtest, empfehle ich dir den Umgang
+      mit der Sortiermaschine schnell zu erlernen."
+    - Du kannst mit deiner Arbeit beginnen, sobald du alle Pakete in die Maschine
+      geladen hast.
+  - name: Tag2 Patrik 2
+    npcName: Patrik
+    sentences:
+    - WAS?! SAG MIR NICHT DU HAST SCHON DEN ERSTEN SCHRITT VERGESSEN!
+    - ...
+    - Ok.. es ist ganz einfach, nimm die Pakete von links und leg sie in die Maschine
+      auf der rechten Seite.
+    - "Selbstverst\xE4ndlich musst du die Pakete daf\xFCr erst aufheben, aber das
+      wusstest du schon, oder?"
+  - name: Tag2 Patrik 3
+    npcName: Patrik
+    sentences:
+    - ...Die pakete von LINKS nach RECHTS verlegen.
+  - name: Tag2 Patrik 4
+    npcName: Patrik
+    sentences:
+    - Jetzt wo du die Pakete in die Maschine geladen hast, sind sie querfeldein auf
+      den Baum verteilt.
+    - Oben links in der Ecke sitzt das Array, also in welcher Reihenfolge die Pakete
+      dann ausgegeben werden, sobald du fertig bist.
+    - "Versuch die Pakete so zu sortieren, dass sie vom gr\xF6\xDFten zum kleinsten
+      ausgegeben werden."
+    - 'Und nochmal zur erinnerung: Das Array wird von oben nach unten und links nach
+      rechts ausgelesen!'
+  - name: Tag2 Patrik 5
+    npcName: Patrik
+    sentences:
+    - Du kannst nur direkt miteinander verbundene Knotenpunkte austauschen.
+    - "Und vergiss nicht die Knoten, die unter den \xDCberliegenden Knoten liegen
+      m\xFCssen kleiner sein als der obere!"
+  - name: Tag2 Patrik 6
+    npcName: Patrik
+    sentences:
+    - Notfalls kannst du auf Heappy klicken, um ein kleines Tutorial zu bekommen.
+  - name: Tag2 Patrik 7
+    npcName: Patrik
+    sentences:
+    - "Sehr sch\xF6n, wie ich sehe hast du deine Arbeit abgeschlossen, um ehrlich
+      zu sein habe ich dir aber nicht wirklich weiter zugeschaut, also kann ich nicht
+      beurteilen, ob du tats\xE4chlich die Pakete sortiert oder einfach nur willk\xFCrlich
+      aufs Display geklickt hast."
+    - "Klick auf den gro\xDFen roten Knopf neben mir, um die Pakete f\xFCr den Transport
+      los zu senden."
+  - name: Tag2 Patrik 8
+    npcName: Patrik
+    sentences:
+    - "Der Knopf mitten im Raum, rot, gro\xDF und schwer zu verfehlen. Ich empfehle
+      dir, ihn zu dr\xFCcken, sobald du denkst, dass du fertig bist."
+  - name: Tag2 Patrik 9
+    npcName: Patrik
+    sentences:
+    - "Machst du das mit Absicht oder hast du tats\xE4chlich Schwierigkeiten den
+      Knopf zu finden?"
+  - name: Tag2 Patrik 10
+    npcName: Patrik
+    sentences:
+    - "Rhetorische Frage, versuch erst gar nicht zu Antworten, ich werde den Knopf
+      einfach selbst bet\xE4tigen, egal ob du jetzt bereit bist oder nicht, denn
+      ich will heute noch nach Hause."
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+  - name: 
+    npcName: 
+    sentences: []
+--- !u!4 &1197558391
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197558389}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1205293608
 GameObject:
@@ -1937,6 +2792,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293228445}
   m_CullTransparentMesh: 1
+--- !u!1 &1333624095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1333624096}
+  - component: {fileID: 1333624099}
+  - component: {fileID: 1333624098}
+  - component: {fileID: 1333624097}
+  m_Layer: 5
+  m_Name: ContinueButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1333624096
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333624095}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 895054348}
+  m_Father: {fileID: 691687545}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1019, y: -236}
+  m_SizeDelta: {x: 314.1277, y: 86.7889}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1333624097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333624095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1333624098}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1197558390}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: DisplayNextSentence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1333624098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333624095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1333624099
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333624095}
+  m_CullTransparentMesh: 1
 --- !u!1 &1433085463
 GameObject:
   m_ObjectHideFlags: 0
@@ -2032,6 +3021,141 @@ MonoBehaviour:
   index: 0
   next: {fileID: 0}
   isActive: 0
+--- !u!1 &1460513208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1460513209}
+  - component: {fileID: 1460513211}
+  - component: {fileID: 1460513210}
+  m_Layer: 5
+  m_Name: Name
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1460513209
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460513208}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 691687545}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -995.3457, y: 265.50537}
+  m_SizeDelta: {x: 455.3515, y: 94.5852}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1460513210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460513208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: NPC Name
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 70
+  m_fontSizeBase: 70
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1460513211
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460513208}
+  m_CullTransparentMesh: 1
 --- !u!1 &1473045558
 GameObject:
   m_ObjectHideFlags: 0
@@ -2108,6 +3232,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1473045558}
   m_CullTransparentMesh: 1
+--- !u!1 &1564062012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1564062014}
+  - component: {fileID: 1564062013}
+  m_Layer: 5
+  m_Name: TextboxTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1564062013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564062012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9b705c30d50df142ab49a79a361fe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyDown: 0
+  animator: {fileID: 0}
+  Texte: []
+  dialogueTrigger: {fileID: 0}
+  textIndex: 2
+--- !u!224 &1564062014
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564062012}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1639418506
 GameObject:
   m_ObjectHideFlags: 0
@@ -2361,7 +3539,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1796825190
 GameObject:
@@ -2494,7 +3672,7 @@ RectTransform:
   - {fileID: 1943387176}
   - {fileID: 2146369973}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3996,7 +5174,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 83.363, y: 0, z: 0}
 --- !u!1 &1984539002
 GameObject:
@@ -4031,7 +5209,7 @@ Transform:
   - {fileID: 29339561}
   - {fileID: 248852864}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2112933543
 GameObject:
