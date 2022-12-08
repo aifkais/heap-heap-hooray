@@ -9,13 +9,22 @@ public class DialogueManager : MonoBehaviour
 {
   public TMP_Text nameText;
   public TMP_Text dialogueText;
-  public TextBoxTrigger textBoxTrigger;
-
+  //public TextBoxTrigger textBoxTrigger;
+  public GameObject btn;
   public Animator animator;
   public Dialogue [] textArray = new Dialogue [50];
 
   private Queue<string> sentences;
   
+
+  [SerializeField] bool keyDown;
+    
+ 
+  //public GameObject [] Texte;
+  //public DialogueTrigger dialogueTrigger;
+  public int textIndex =0;
+
+
 
     // Start is called before the first frame update
   void Start()
@@ -26,7 +35,26 @@ public class DialogueManager : MonoBehaviour
     }
   
   
+   void Update()
+    {
+        
+        if(Input.GetAxis ("Jump")!=0){
+		    if(!keyDown&&animator.GetBool("IsOpen")==false){
 
+        StartDialogue(textIndex);
+		    keyDown = true;	  
+		    } else if(!keyDown&&animator.GetBool("IsOpen")==true){
+          
+         DisplayNextSentence();
+         keyDown = true;	 
+        }
+        }
+
+        
+        else {
+        keyDown= false;
+        }
+}
 
 
   public void StartDialogue(int textIndex) 
@@ -47,7 +75,9 @@ public class DialogueManager : MonoBehaviour
 
 
   public void DisplayNextSentence(){
+
     if(sentences.Count == 0){
+    
       EndDialogue();
       return;
     }
@@ -66,7 +96,6 @@ public class DialogueManager : MonoBehaviour
   }
 
   void EndDialogue(){
-    
     animator.SetBool("IsOpen", false);
    
     

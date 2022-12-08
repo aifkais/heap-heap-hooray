@@ -23,16 +23,16 @@ public class TextBoxTrigger : MonoBehaviour
     {
         
         if(Input.GetAxis ("Jump")!=0){
-		    if(!keyDown){
+		    if(!keyDown&&animator.GetBool("IsOpen")==false){
+                Debug.Log("!h");
             FindObjectOfType<DialogueManager>().StartDialogue(textIndex);
-        
 		    keyDown = true;	  
-            
-            
-        
 		    }
-        }else {
-            keyDown= false;
+        }
+
+        
+        else {
+        keyDown= false;
         }
 }
 
