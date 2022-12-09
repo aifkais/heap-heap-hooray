@@ -9,20 +9,19 @@ public class DialogueManager : MonoBehaviour
 {
   public TMP_Text nameText;
   public TMP_Text dialogueText;
-  //public TextBoxTrigger textBoxTrigger;
-  public GameObject btn;
+  
   public Animator animator;
+  [SerializeField] bool keyDown;
+    
+ 
+  
+  public int textIndex =0;
   public Dialogue [] textArray = new Dialogue [50];
 
   private Queue<string> sentences;
   
 
-  [SerializeField] bool keyDown;
-    
- 
-  //public GameObject [] Texte;
-  //public DialogueTrigger dialogueTrigger;
-  public int textIndex =0;
+  
 
 
 
@@ -35,7 +34,7 @@ public class DialogueManager : MonoBehaviour
     }
   
   
-   void Update()
+   void Update() // loest die TextBoxen aus
     {
         
         if(Input.GetAxis ("Jump")!=0){

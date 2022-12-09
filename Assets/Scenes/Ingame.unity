@@ -2200,10 +2200,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 1460513210}
   dialogueText: {fileID: 217837481}
-  btn: {fileID: 0}
   animator: {fileID: 691687546}
+  keyDown: 0
+  textIndex: 0
   textArray:
-  - name: Tag1 Patrik 1
+  - name: 0 Tag1 Patrik 1
     npcName: Patrik
     sentences:
     - Willkommen zu deiner ersten Schicht bei uns im DHL!
@@ -2213,7 +2214,7 @@ MonoBehaviour:
       aber keine Sorge, das Sortiersystem ist nicht nur nahezu vollautomatisch, sondern
       auch einfach zu bedienen!"
     - "Hier komm n\xE4her, ich zeige dir, wie es\r\nfunktioniert!"
-  - name: Tag1 Patrik 2
+  - name: 1 Tag1 Patrik 2
     npcName: Patrik
     sentences:
     - "Wie du siehst, habe ich schon links 5 Pakete f\xFCr dich bereit gelegt."
@@ -2230,14 +2231,12 @@ MonoBehaviour:
       ist egal.
     - "Und sobald du fertig bist, geh zum Display und klicke auf den Startknopf,
       um das Wunder der Technik in Aktion zu sehen.\r"
-  - name: Tag1 Patrik 3
+  - name: 2 Tag1 Patrik 3
     npcName: Patrik
     sentences:
     - ...
     - ...nunja, erinnerst du dich noch, als ich dir gesagt habe, dass dir das manuelle
       bedienen zeitnah beigebracht wird?
-    - "Die Zeit ist jetzt gekommen! Geh zur\xFCck zum Display und ich zeig dir, wie
-      alles funktioniert."
     - "Die Zeit ist jetzt gekommen! Geh zur\xFCck zum Display und ich zeig dir, wie
       alles funktioniert."
     - Im manuellen Modus muss der Maschinen-interne Heapsort selbst angewendet werden...
@@ -2249,7 +2248,7 @@ MonoBehaviour:
     - "\u201CNach CSTM UD113.77B: Wenn im Manu-Mode: Pakete werden beim ausw\xE4hlen
       im Baum oder Array jeweils farblich markiert, f\xFCr verbesserte \xFCbersicht
       -Gru\xDF Steffen\u201D"
-  - name: Tag1 Patrik 4
+  - name: 3 Tag1 Patrik 4
     npcName: Patrik
     sentences:
     - "Ich bin mir nicht sicher, was genau mit \u201CHeapsort\u201D gemeint ist,
@@ -2257,7 +2256,7 @@ MonoBehaviour:
       dazu stehen muss!"
     - "Fang schon mal an die Pakete auf den \xE4h... Baum... zu schieben. Ich werde
       dir gleich erkl\xE4ren, wie es weiter geht."
-  - name: Tag1 Patrik 5
+  - name: 4 Tag1 Patrik 5
     npcName: Patrik
     sentences:
     - AH! Du bist schon fertig?!
@@ -2269,7 +2268,7 @@ MonoBehaviour:
     - "Also wirst du wohl in n\xE4herer Zukunft die Pakete manuell sortieren m\xFCssen,
       aber keine Sorge, ich werde daf\xFCr in deiner Akte notieren, dass deine Arbeit
       ausreichend war."
-  - name: Tag1 clippy tutmodi
+  - name: 5 Tag1 clippy tutmodi
     npcName: clippy tutmodi
     sentences:
     - "Wie ich sehe, versuchen sie den Heapsort zu verstehen, ben\xF6tigen sie Hilfe?"
@@ -2288,10 +2287,7 @@ MonoBehaviour:
       untergeordnete [KNOTEN4], also tauscht man beide wieder aus."
     - "Wiederholen Sie diese Schritte bis das Array oben Links geordnet ist. Die
       Simulation ist nun beendet und Sie k\xF6nnen mit Ihrer Arbeit beginnen."
-  - name: Tag2 Patrik 1
-    npcName: Patrik
-    sentences: []
-  - name: Tag2 Patrik 1
+  - name: 6 Tag2 Patrik 1
     npcName: Patrik
     sentences:
     - Guten Morgen! Ich hoffe, dass du ausgeschlafen hast, denn heute wird es nicht
@@ -2318,7 +2314,7 @@ MonoBehaviour:
       mit der Sortiermaschine schnell zu erlernen."
     - Du kannst mit deiner Arbeit beginnen, sobald du alle Pakete in die Maschine
       geladen hast.
-  - name: Tag2 Patrik 2
+  - name: 7 Tag2 Patrik 2
     npcName: Patrik
     sentences:
     - WAS?! SAG MIR NICHT DU HAST SCHON DEN ERSTEN SCHRITT VERGESSEN!
@@ -2327,11 +2323,11 @@ MonoBehaviour:
       auf der rechten Seite.
     - "Selbstverst\xE4ndlich musst du die Pakete daf\xFCr erst aufheben, aber das
       wusstest du schon, oder?"
-  - name: Tag2 Patrik 3
+  - name: 8 Tag2 Patrik 3
     npcName: Patrik
     sentences:
     - ...Die pakete von LINKS nach RECHTS verlegen.
-  - name: Tag2 Patrik 4
+  - name: 9 Tag2 Patrik 4
     npcName: Patrik
     sentences:
     - Jetzt wo du die Pakete in die Maschine geladen hast, sind sie querfeldein auf
@@ -2342,17 +2338,17 @@ MonoBehaviour:
       ausgegeben werden."
     - 'Und nochmal zur erinnerung: Das Array wird von oben nach unten und links nach
       rechts ausgelesen!'
-  - name: Tag2 Patrik 5
+  - name: 10 Tag2 Patrik 5
     npcName: Patrik
     sentences:
     - Du kannst nur direkt miteinander verbundene Knotenpunkte austauschen.
     - "Und vergiss nicht die Knoten, die unter den \xDCberliegenden Knoten liegen
       m\xFCssen kleiner sein als der obere!"
-  - name: Tag2 Patrik 6
+  - name: 11 Tag2 Patrik 6
     npcName: Patrik
     sentences:
     - Notfalls kannst du auf Heappy klicken, um ein kleines Tutorial zu bekommen.
-  - name: Tag2 Patrik 7
+  - name: 12 Tag2 Patrik 7
     npcName: Patrik
     sentences:
     - "Sehr sch\xF6n, wie ich sehe hast du deine Arbeit abgeschlossen, um ehrlich
@@ -2361,22 +2357,132 @@ MonoBehaviour:
       aufs Display geklickt hast."
     - "Klick auf den gro\xDFen roten Knopf neben mir, um die Pakete f\xFCr den Transport
       los zu senden."
-  - name: Tag2 Patrik 8
+  - name: 13 Tag2 Patrik 8
     npcName: Patrik
     sentences:
     - "Der Knopf mitten im Raum, rot, gro\xDF und schwer zu verfehlen. Ich empfehle
       dir, ihn zu dr\xFCcken, sobald du denkst, dass du fertig bist."
-  - name: Tag2 Patrik 9
+  - name: 14 Tag2 Patrik 9
     npcName: Patrik
     sentences:
     - "Machst du das mit Absicht oder hast du tats\xE4chlich Schwierigkeiten den
       Knopf zu finden?"
-  - name: Tag2 Patrik 10
+  - name: 15 Tag2 Patrik 10
     npcName: Patrik
     sentences:
     - "Rhetorische Frage, versuch erst gar nicht zu Antworten, ich werde den Knopf
       einfach selbst bet\xE4tigen, egal ob du jetzt bereit bist oder nicht, denn
       ich will heute noch nach Hause."
+  - name: 16 Tag3 Patrik 1
+    npcName: 
+    sentences:
+    - "Neuer Tag, neues Gl\xFCck! So auch die Chance, wieder alles zu vermasseln!
+      Aber erstmal gute Neuigkeiten!"
+    - "Dank deiner gestrigen Leistung hab ich eine Entscheidung f\xFCr dich getroffen
+      und dich hiermit in deinen ganz eigenen F\xF6rderauftrag eingeschrieben!"
+    - "Nein, nein, kein Grund, mir zu danken, du hast es verdient! Nat\xFCrlich muss
+      ich dir nicht sagen, dass damit deine t\xE4gliche Arbeitsbelastung deutlich
+      steigt."
+    - "Nein, nein, kein Grund, mir zu danken, du hast es verdient! Nat\xFCrlich muss
+      ich dir nicht sagen, dass damit deine t\xE4gliche Arbeitsbelastung deutlich
+      steigt."
+    - "Was \xFCbersetzt hei\xDFt, ja, du hast richtig geraten.\r\n"
+    - MEHR PAKETE!!!
+    - DEUTLICH. MEHR. PAKETE.
+    - "Ich w\xFCrde fast schon sagen, dass es eine absurde Menge an Paketen ist,
+      aber das ist nicht ganz wahr."
+    - "Was aber Wahr ist, dass die zu sortierenden Pakete heute und in den n\xE4chsten
+      Tagen zunimmt. Aber im Gegenzug hast du die Chance eine Bef\xF6rderung zu bekommen!"
+    - "Stell dir nur vor, was du mit 12 Cent pro Stunde \xFCber dem Mindestlohn nur
+      alles kaufen kannst! So viel, dass ich selber Schwierigkeiten habe, Dinge aufzuz\xE4hlen.\r\n"
+    - Wenn du so weitermachst, kannst du in nur ein paar wenigen Jahren dieselbe
+      Position einnehmen wie ich!
+    - 'Und alles, was du machen musst, ist jeden Tag deine 110% zu geben.
+
+'
+    - "Aber genug \xFCber deine Zukunfts aussichten geredet. Je schneller du mit
+      deiner Arbeit anf\xE4ngst, desto schneller bekommen unsere Kunden ihre Pakete."
+    - Wie immer, deine Arbeit beginnt, sobald du die Pakete in die Maschine geladen
+      hast.
+    - "Oh und nochmal zur Erinnerung, ich bin hier, wenn du Hilfe beim Sortieren
+      brauchst bezieungsweise wenns zu viel wird und zus\xE4tzlich seelische Hilfe
+      ben\xF6tigst!"
+  - name: 17 Tag3 Patrik 2
+    npcName: Patrik
+    sentences:
+    - "Echt Jetzt? Ich gebe dir eine gro\xDFartige Rede, wie toll du doch gestern
+      gearbeitet hast und auf einmal hast du vergessen, was du als aller erstes machen
+      musst?"
+    - "Wenn du so weiter machst, bekommst du nie deine Bef\xF6rderung! Aber vielleicht
+      liegt es einfach nur am Leistungsdruck..."
+    - "Am besten nimmst du die Pakete links und l\xE4dst sie in die Maschine zu deiner
+      Rechten. Danach musst du nur zum Terminal und deine Arbeit beginnen."
+    - "Siehste? Gar nicht so schwer. Nun zur\xFCck an die Arbeit."
+  - name: 18 Tag3 Patrik 3
+    npcName: Patrik
+    sentences:
+    - Ok, vielleicht war ich beim ersten Mal nicht einfach genug.
+    - "LINKS stehen die Pakete und sie m\xFCssen nach RECHTS in die Maschiene."
+    - "Am besten benutzt du deine H\xE4nde, um das zu erm\xF6glichen."
+  - name: 19 Tag3 Patrik 4
+    npcName: Patrik
+    sentences:
+    - "Du wirst \xFCbrigens nicht stundenweise bezahlt."
+  - name: 20 Tag3 Patrik 5
+    npcName: Patrik
+    sentences:
+    - "So langsam zweifle ich an meiner Entscheidung, dir einen F\xF6rderauftrag
+      gegeben zu haben. Besonders wenn Management mir den Hintern versohlen wird,
+      wenn du so oft Fragen stellen musst."
+    - "Aber nichtsdestotrotz habe ich dir ja versprochen, hier zu sein. Also pass
+      auf. Du musst daf\xFCr sorgen, dass die gr\xF6\xDFten Pakete zuerst ausgegeben
+      werden."
+    - "Das erreichst du indem du die Knoten so anordnest, dass die \xFCberliegenden
+      Knoten gr\xF6\xDFer sind als die darunter."
+    - "\xDCbrigens kannst du auch den Array oben in der Ecke zu Rat ziehen, um zu
+      schauen, ob du alles richtig machst."
+    - Der array liest den Baum von oben nach unten und links nach rechts.
+    - Ich meine, du kannst tun, was immer du willst, ich sage es nur.
+  - name: 21 Tag3 Patrik 6
+    npcName: Patrik
+    sentences:
+    - Schon wieder alles vergessen?!
+    - "Ok hier ist die Kurzfassung, oben links siehst du die Reihenfolge in der die
+      Pakete ausgegeben werden, du willst das die mit dem gr\xF6\xDFten Wert zuerst
+      und die kleinsten zuletzt rauskommen."
+    - "Das erreichst du indem du die Pakete auf dem Baum so sortiert, dass die gr\xF6\xDFten
+      oben und die kleinsten unten sind."
+    - Die Pakete werden von oben nach unten und links nach rechts ausgegeben, so
+      behalte das im Hinterkopf.
+  - name: 22 Tag3 Patrik 7
+    npcName: Patrik
+    sentences:
+    - "Du wirst \xFCbrigens immer noch nicht stundenweise bezahlt. Ich hingegen schon,
+      also hilfst du mir sogar, wenn du mich nonstop ansprichst."
+  - name: 23 Tag3 Patrik 8
+    npcName: Patrik
+    sentences:
+    - "Wenn du denkst, dass du fertig bist, kannst du gerne den Knopf bet\xE4tigen
+      und deine Arbeit als abgeschlossen melden."
+    - "Ich meine ja, dass du vielleicht nochmal nachschauen solltest, ob alles korrekt
+      ist, schlie\xDFlich ist es ja deine Aufgabe sicherzustellen, ob alles in Ordnung
+      ist."
+    - Meine Aufgabe ist es, nur nachzuschauen, ob du alles richtig machst, nicht
+      ob du es ordentlich machst. Also passiert mir nichts, wenn du etwas vermasselt.
+    - 'Obwohl...
+
+'
+    - Wenn du es so monumental vermasselst, dass es die ganze Logistikkette paralysiert,
+      dann wird mich Management auch am Kragen packen!
+    - "Vielleicht w\xE4re es ja doch eine gute Idee nochmal gr\xFCndlich nachzuschauen!
+      Nur ein kleiner, freundlicher Hinweis."
+  - name: 24 Tag3 Patrik 9
+    npcName: Patrik
+    sentences:
+    - "Ich werde im Gegensatz zu dir zwar stundenweise bezahlt, aber ich m\xF6chte
+      auch gerne heute noch Feierabend machen."
+    - Also nein, ich werde nicht mitspielen und nonstop deine banalen Fragen beantworten,
+      wenn du schon fertig bist.
   - name: 
     npcName: 
     sentences: []
@@ -2443,35 +2549,6 @@ MonoBehaviour:
   - name: 
     npcName: 
     sentences: []
-  - name: 
-    npcName: 
-    sentences: []
-  - name: 
-    npcName: 
-    sentences: []
-  - name: 
-    npcName: 
-    sentences: []
-  - name: 
-    npcName: 
-    sentences: []
-  - name: 
-    npcName: 
-    sentences: []
-  - name: 
-    npcName: 
-    sentences: []
-  - name: 
-    npcName: 
-    sentences: []
-  - name: 
-    npcName: 
-    sentences: []
-  - name: 
-    npcName: 
-    sentences: []
-  keyDown: 0
-  textIndex: 0
 --- !u!4 &1197558391
 Transform:
   m_ObjectHideFlags: 0
