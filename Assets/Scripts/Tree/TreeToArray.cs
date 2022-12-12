@@ -1,7 +1,5 @@
 using System;
-using System.Linq;
 using TMPro;
-using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class TreeToArray : MonoBehaviour
@@ -9,6 +7,8 @@ public class TreeToArray : MonoBehaviour
     [SerializeField] private GameObject gameController;
     [SerializeField] private GameObject arrayAnzeige;
     private int[] array;
+
+    //GameManager.instance.arry[i] = mainArray[i];
 
     private void Start()
     {

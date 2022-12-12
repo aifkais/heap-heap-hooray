@@ -7,18 +7,18 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-  public TMP_Text nameText;
-  public TMP_Text dialogueText;
+    public TMP_Text nameText;
+    public TMP_Text dialogueText;
   
-  public Animator animator;
-  [SerializeField] bool keyDown;
-    
- 
-  
-  public int textIndex =0;
-  public Dialogue [] textArray = new Dialogue [50];
+    public Animator animator;
+    [SerializeField] bool keyDown;
+    [SerializeField] private LevelController levelController;
 
-  private Queue<string> sentences;
+    public int textIndex;
+    public Dialogue [] textArray = new Dialogue [50];
+    
+
+    private Queue<string> sentences;
   
 
   
@@ -28,7 +28,7 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
   void Start()
     {
-      
+        
         sentences = new Queue<string>();
         
     }
@@ -36,20 +36,18 @@ public class DialogueManager : MonoBehaviour
   
    void Update() // loest die TextBoxen aus
     {
-        
-        if(Input.GetAxis ("Jump")!=0){
+        textIndex = levelController.getLevelDialogueIndex();
+
+        if (Input.GetAxis ("Jump")!=0){
 		    if(!keyDown&&animator.GetBool("IsOpen")==false){
-
-        StartDialogue(textIndex);
-		    keyDown = true;	  
-		    } else if(!keyDown&&animator.GetBool("IsOpen")==true){
-          
-         DisplayNextSentence();
-         keyDown = true;	 
+                StartDialogue(textIndex);
+		        keyDown = true;	  
+		    } 
+            else if(!keyDown&&animator.GetBool("IsOpen")==true){
+                DisplayNextSentence();
+                keyDown = true;	 
+            }
         }
-        }
-
-        
         else {
         keyDown= false;
         }
