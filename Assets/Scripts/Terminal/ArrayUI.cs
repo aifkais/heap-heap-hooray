@@ -48,6 +48,7 @@ public class ArrayUI : MonoBehaviour
         }
 
         GleicheEliminieren(GameManager.instance.arrayAnzeige);
+        GleicheEliminieren(GameManager.instance.arrayAnzeige);
 
         return array;
     }
@@ -86,13 +87,13 @@ public class ArrayUI : MonoBehaviour
 
     static void GleicheEliminieren(string[] strings)
     {
-        for(int i=0; i<strings.Length; i++)
+        for (int i = 0; i < strings.Length - 1; i++)
         {
-            if(i != strings.Length - 1)
+            if (string.Equals(strings[i], strings[i + 1]))
             {
-                if (string.Equals(strings[i], strings[i + 1]))
+                for (int j = i; j < strings.Length - 1; j++)
                 {
-                    strings[i + 1]= "";
+                    strings[j] = strings[j + 1];
                 }
             }
         }
@@ -102,7 +103,6 @@ public class ArrayUI : MonoBehaviour
     void Start()
     {
         textMeshProUGUI = gameObject.GetComponent<TextMeshProUGUI>();
-      
     }
 
     // Update is called once per frame
@@ -110,15 +110,8 @@ public class ArrayUI : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            zaehler += 1;
-            if (GameManager.instance.arrayAnzeige[zaehler] == "")            
-               zaehler += 1;
-                
-            
             textMeshProUGUI.text = GameManager.instance.arrayAnzeige[zaehler];
-
-
-            //textMeshProUGUI.text = GameManager.instance.ablage.Length.ToString();/"Array: [" + GameManager.instance.arry[0].ToString() + "," + GameManager.instance.arry[1].ToString() + "," + GameManager.instance.arry[2].ToString() + "," + GameManager.instance.arry[3].ToString() + "," + GameManager.instance.arry[4].ToString() + "," + GameManager.instance.arry[5].ToString() + "," + GameManager.instance.arry[6].ToString() + "]";
+            zaehler += 1;
         }
         if (Input.GetKeyDown(KeyCode.O))        
             SortArray(GameManager.instance.arry, GameManager.instance.arry.Length);
