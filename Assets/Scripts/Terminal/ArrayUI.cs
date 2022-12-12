@@ -75,7 +75,7 @@ public class ArrayUI : MonoBehaviour
         ArrayText(array);
     }
     
-    public static void ArrayText(int[] array1)
+    static void ArrayText(int[] array1)
     {
         for(int i = 0; i<array1.Length; i++)
         {
@@ -84,7 +84,7 @@ public class ArrayUI : MonoBehaviour
         
     }
 
-    public static void GleicheEliminieren(string[] strings)
+    static void GleicheEliminieren(string[] strings)
     {
         for(int i=0; i<strings.Length; i++)
         {
