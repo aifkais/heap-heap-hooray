@@ -8,7 +8,7 @@ public class TreeToArray : MonoBehaviour
     [SerializeField] private GameObject arrayAnzeige;
     private int[] array;
 
-    //GameManager.instance.arry[i] = mainArray[i];
+    //GameManager.instance.arry = array;
 
     private void Start()
     {
@@ -19,6 +19,9 @@ public class TreeToArray : MonoBehaviour
     {
         UpdateArray();
         arrayAnzeige.GetComponent<TextMeshPro>().text = formatArray();
+
+        print(getLastIndex());
+        
     }
 
     private void UpdateArray()
@@ -33,10 +36,59 @@ public class TreeToArray : MonoBehaviour
         }
     }
 
+    /*private void lockLastNode()
+    {
+        if (getLargestValue() == getLast())
+        {
+            transform.GetChild(Array.IndexOf(array, getLast())).GetComponent<Node>().setLocked(true);
+        }
+    }*/
+
+    public int getLargestValue() //That is not locked
+    {
+        int max = 0;
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (transform.GetChild(i).GetComponent<Node>().getLocked() == false) //nur wenn node nicht locked ist
+                if (array[i] > max) max = array[i];
+        }
+        return max;
+    }
+
+    public int getLastIndex() //That is not locked
+    {
+        int last = 0;
+        for (int i = 0; i < array.Length; i++)
+        {
+            last = i;
+            if (transform.GetChild(i).GetComponent<Node>().getLocked() == true)
+            {
+                last--;
+                break;
+            }
+        }
+        return last;
+    }
+
+    public bool AllPlaced()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            GameObject box = transform.GetChild(i).GetComponent<Node>().getPlacedBox();
+            if (!box)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public int getParent(float index)
     {
         return (int)Math.Floor((index - 1) / 2);
     }
+
+    
 
     public int[] getArray()
     {

@@ -12,6 +12,7 @@ public class Swap : MonoBehaviour
 
 
     private bool inAnimation = false;
+    private int lastSwap = 0;
 
     private void Update()
     {
@@ -20,6 +21,8 @@ public class Swap : MonoBehaviour
 
         showSelection(firstSelect);
         showSelection(secondSelect);
+
+        
     }
 
     private bool checkRelation()
@@ -32,9 +35,19 @@ public class Swap : MonoBehaviour
         int firstIndex = Array.IndexOf(array, firstValue);
         int secondIndex = Array.IndexOf(array, secondValue);
 
-        if (firstIndex == GetComponent<TreeToArray>().getParent(secondIndex))
+        if (firstValue == GetComponent<TreeToArray>().getLargestValue() && firstIndex == 0 && secondIndex == GetComponent<TreeToArray>().getLastIndex()) //erste und letzte
+        {
+            lastSwap = 1;
             return true;
-        else if (secondIndex == GetComponent<TreeToArray>().getParent(firstIndex))
+        }
+        else if (secondValue == GetComponent<TreeToArray>().getLargestValue() && secondIndex == 0 && firstIndex == GetComponent<TreeToArray>().getLastIndex()) //erste und letzte
+        {
+            lastSwap = 2;
+            return true;
+        }
+        else if (firstIndex == GetComponent<TreeToArray>().getParent(secondIndex)) //child und parent
+            return true;
+        else if (secondIndex == GetComponent<TreeToArray>().getParent(firstIndex)) //child und parent
             return true;
         else return false;
     }
@@ -48,10 +61,16 @@ public class Swap : MonoBehaviour
         }
     }
 
+    private void lockNode(GameObject Node)
+    {
+        Node.GetComponent<Node>().setLocked(true);
+    }
+
     IEnumerator InitiateSwap()
     {
         if (checkRelation())
         {
+            inAnimation = true;
             firstSelect.transform.GetComponent<Node>().setPlacedBox(null);
             secondSelect.transform.GetComponent<Node>().setPlacedBox(null);
 
@@ -59,6 +78,18 @@ public class Swap : MonoBehaviour
 
             try
             {
+                if (lastSwap == 1)
+                {
+                    lockNode(secondSelect);
+                    lastSwap = 0;
+                }
+                else if (lastSwap == 2)
+                {
+                    lockNode(firstSelect);
+                    lastSwap = 0;
+                }
+                    
+
                 firstSelect.transform.GetComponent<Node>().setPlacedBox(secondBox);
                 secondSelect.transform.GetComponent<Node>().setPlacedBox(firstBox);
             }
@@ -66,6 +97,15 @@ public class Swap : MonoBehaviour
             
         }
         yield return new WaitForSeconds(0.1f);
+
+        /*int[] array = GetComponent<TreeToArray>().getArray();
+        int firstValue = firstBox.GetComponent<Box>().getBoxValue();
+        int secondValue = secondBox.GetComponent<Box>().getBoxValue();
+        if (Array.IndexOf(array, firstValue) == GetComponent<TreeToArray>().getLastIndex() && firstValue == GetComponent<TreeToArray>().getLargestValue())
+            lockNode(firstSelect);
+        if (Array.IndexOf(array, secondValue) == GetComponent<TreeToArray>().getLastIndex() && secondValue == GetComponent<TreeToArray>().getLargestValue())
+            lockNode(secondSelect);*/
+        inAnimation = false;
         deselect();
     }
 
@@ -98,14 +138,14 @@ public class Swap : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector3.back, 100, ~LayerMask.NameToLayer("Node"));
             if (hit)
             {
-                if (hit.transform.GetComponent<Node>().hasPlacedBox() && !hit.transform.GetComponent<Node>().getLocked()) 
+                if (hit.transform.GetComponent<Node>().hasPlacedBox() && !hit.transform.GetComponent<Node>().getLocked() && GetComponent<TreeToArray>().AllPlaced() && !inAnimation) 
                     select(hit.transform.gameObject);
             }
         }
     }
 
     //Select & Deselect
-    public void select(GameObject Node) 
+    private void select(GameObject Node) 
     {
         if (firstSelect == Node)
             deselect();
@@ -121,7 +161,7 @@ public class Swap : MonoBehaviour
         }
     }
 
-    public void deselect()
+    private void deselect()
     {
         if (firstSelect)
         {

@@ -40,6 +40,11 @@ public class Node : MonoBehaviour
         return locked;
     }
 
+    public void setLocked(bool locked)
+    {
+        this.locked = locked;
+    }
+
     public void setPlacedBox(GameObject placedBox)
     {
         this.placedBox = placedBox;
