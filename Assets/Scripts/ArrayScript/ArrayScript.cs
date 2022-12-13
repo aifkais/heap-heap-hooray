@@ -27,8 +27,7 @@ public class ArrayScript : MonoBehaviour
 
         mainArray[i] = randomZahl; // Zufallszahl wird in IntArray zugefügt
 
-            GameManager.instance.arry[i] = mainArray[i];
-            GameManager.instance.Text[i] = mainArray[i].ToString();
+            
 
         }
         updatepic();
@@ -112,8 +111,7 @@ public class ArrayScript : MonoBehaviour
                 if(mainArray[i]==e){ 
                 myArrays[i].GetComponent<Image>().sprite = spritos[e];
         }
-                GameManager.instance.arry[i] = mainArray[i];
-                GameManager.instance.Text[i] = mainArray[i].ToString();
+                
             }
 
         }

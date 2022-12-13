@@ -7,7 +7,6 @@ using UnityEngine;
 public class ArrayUI : MonoBehaviour
 {
     private TextMeshProUGUI textMeshProUGUI;
-    private int zaehler = 0;
     private int laengeArray = 7;
     
     //Heapsort
@@ -17,9 +16,7 @@ public class ArrayUI : MonoBehaviour
             return array;
         for (int i = size / 2 - 1; i >= 0; i--)
         {
-           
                 Heapify(array, size, i);
-            
         }
         for (int i = size - 1; i >= 0; i--)
         {
@@ -28,9 +25,8 @@ public class ArrayUI : MonoBehaviour
             array[i] = tempVar;
             
                 Heapify(array, i, 0);
-            
-               
         }
+
         // String zu Char Array
         GameManager.instance.sortiertesArray = new char[GameManager.instance.txt.Length];
         for(int i = 0; i <= GameManager.instance.txt.Length; i++)
@@ -82,7 +78,6 @@ public class ArrayUI : MonoBehaviour
         {
                 GameManager.instance.txt += array1[i];
         }
-        
     }
 
     static void GleicheEliminieren(string[] strings)
@@ -108,13 +103,9 @@ public class ArrayUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.O))
         {
-            textMeshProUGUI.text = GameManager.instance.arrayAnzeige[zaehler];
-            zaehler += 1;
-        }
-        if (Input.GetKeyDown(KeyCode.O))        
             SortArray(GameManager.instance.arry, GameManager.instance.arry.Length);
-        
+        }        
     }
 }
