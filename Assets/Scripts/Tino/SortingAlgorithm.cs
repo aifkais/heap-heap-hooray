@@ -108,7 +108,7 @@ public class SortingAlgorithm : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.O))
         {
-            SortArray(levelController.arry, levelController.arry.Length);
+            SortArray(levelController.getLevelArray(), levelController.getLevelArray().Length);
         }        
     }
 }
