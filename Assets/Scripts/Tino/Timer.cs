@@ -7,12 +7,17 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     [SerializeField] private GameObject TimerText;
-    private float timeSec = 50;
-    private int timeMin = 59;
-    private bool timerActive = true;
+    private float timeSec = 0;
+    private int timeMin = 0;
+    private bool timerActive = false;
+
+    public void SetTimer(bool timerActive)
+    {
+        this.timerActive = timerActive;
+    }
     void Start()
     {
-        TimerText.GetComponent<TextMeshPro>().text = "00:00";
+        TimerText.GetComponent<TextMeshPro>().text = "00:00.0";
     }
 
     // Update is called once per frame

@@ -12,6 +12,8 @@ public class BoxSpawning : MonoBehaviour
 
     [SerializeField] private GameObject gameController;
 
+    [SerializeField] private GameObject timer;
+
     private float speed = 5f;
     private int[] unsortetdList;
     private GameObject currentBox;
@@ -32,6 +34,7 @@ public class BoxSpawning : MonoBehaviour
             yield return StartCoroutine(SpawnBox(randomPoint()));
         }
         enablePickUp();
+        timer.GetComponent<Timer>().SetTimer(true);
     }
 
     IEnumerator SpawnBox(Vector2 finalPos)
