@@ -4,10 +4,12 @@ using TMPro;
 using UnityEngine;
 
 
-public class ArrayUI : MonoBehaviour
+public class SortingAlgorithm : MonoBehaviour
 {
+    [SerializeField] private LevelController levelController;
     private TextMeshProUGUI textMeshProUGUI;
-    private int laengeArray = 7;
+    private int laengeArray;
+    
     
     //Heapsort
     public int[] SortArray(int[] array, int size)
@@ -28,28 +30,28 @@ public class ArrayUI : MonoBehaviour
         }
 
         // String zu Char Array
-        GameManager.instance.sortiertesArray = new char[GameManager.instance.txt.Length];
-        for(int i = 0; i <= GameManager.instance.txt.Length; i++)
+        levelController.sortiertesArray = new char[levelController.txt.Length];
+        for(int i = 0; i <= levelController.txt.Length; i++)
         {
-            GameManager.instance.sortiertesArray = GameManager.instance.txt.ToCharArray();
+            levelController.sortiertesArray = levelController.txt.ToCharArray();
         }
         // Char Array zerteilen
         
-        for (int i = 0; i < GameManager.instance.sortiertesArray.Length/ laengeArray; i++)
+        for (int i = 0; i < levelController.sortiertesArray.Length/ laengeArray; i++)
         {
            for(int j = 0; j < 7; j++)
             {
-                GameManager.instance.arrayAnzeige[i] = GameManager.instance.arrayAnzeige[i] + GameManager.instance.sortiertesArray[j + i * 7];
+                levelController.arrayAnzeige[i] = levelController.arrayAnzeige[i] + levelController.sortiertesArray[j + i * 7];
             }
         }
 
-        GleicheEliminieren(GameManager.instance.arrayAnzeige);
-        GleicheEliminieren(GameManager.instance.arrayAnzeige);
+        GleicheEliminieren(levelController.arrayAnzeige);
+        GleicheEliminieren(levelController.arrayAnzeige);
 
         return array;
     }
 
-    static void Heapify(int[] array, int size, int index)
+    void Heapify(int[] array, int size, int index)
     {
         var largestIndex = index;
         var leftChild = 2 * index + 1;
@@ -72,15 +74,15 @@ public class ArrayUI : MonoBehaviour
         ArrayText(array);
     }
     
-    static void ArrayText(int[] array1)
+    void ArrayText(int[] array1)
     {
         for(int i = 0; i<array1.Length; i++)
         {
-                GameManager.instance.txt += array1[i];
+            levelController.txt += array1[i];
         }
     }
 
-    static void GleicheEliminieren(string[] strings)
+    void GleicheEliminieren(string[] strings)
     {
         for (int i = 0; i < strings.Length - 1; i++)
         {
@@ -98,6 +100,7 @@ public class ArrayUI : MonoBehaviour
     void Start()
     {
         textMeshProUGUI = gameObject.GetComponent<TextMeshProUGUI>();
+        laengeArray = levelController.getLevelArray().Length;
     }
 
     // Update is called once per frame
@@ -105,7 +108,7 @@ public class ArrayUI : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.O))
         {
-            SortArray(GameManager.instance.arry, GameManager.instance.arry.Length);
+            SortArray(levelController.arry, levelController.arry.Length);
         }        
     }
 }

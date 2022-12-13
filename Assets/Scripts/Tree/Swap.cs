@@ -98,13 +98,6 @@ public class Swap : MonoBehaviour
         }
         yield return new WaitForSeconds(0.1f);
 
-        /*int[] array = GetComponent<TreeToArray>().getArray();
-        int firstValue = firstBox.GetComponent<Box>().getBoxValue();
-        int secondValue = secondBox.GetComponent<Box>().getBoxValue();
-        if (Array.IndexOf(array, firstValue) == GetComponent<TreeToArray>().getLastIndex() && firstValue == GetComponent<TreeToArray>().getLargestValue())
-            lockNode(firstSelect);
-        if (Array.IndexOf(array, secondValue) == GetComponent<TreeToArray>().getLastIndex() && secondValue == GetComponent<TreeToArray>().getLargestValue())
-            lockNode(secondSelect);*/
         inAnimation = false;
         deselect();
     }

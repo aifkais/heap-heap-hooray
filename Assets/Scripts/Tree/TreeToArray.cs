@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -6,7 +7,10 @@ public class TreeToArray : MonoBehaviour
 {
     [SerializeField] private GameObject gameController;
     [SerializeField] private GameObject arrayAnzeige;
+    [SerializeField] private LevelController levelController;
+    private bool allPlaced = false;
     private int[] array;
+    private bool setFirstArray = true;
 
     //GameManager.instance.arry = array;
 
@@ -17,11 +21,26 @@ public class TreeToArray : MonoBehaviour
 
     private void Update()
     {
+        if (AllPlaced())
+        {
+            allPlaced = true;
+        }
+        
         UpdateArray();
         arrayAnzeige.GetComponent<TextMeshPro>().text = formatArray();
 
-        print(getLastIndex());
-        
+        print(allPlaced);
+        if ((allPlaced == true) && (setFirstArray == true)) //einmalig ausgeführ
+        {
+            save();
+        }
+    }
+
+    private void save()
+    {
+        print("saved");
+        levelController.setArry(array);
+        setFirstArray = false;
     }
 
     private void UpdateArray()
@@ -35,14 +54,6 @@ public class TreeToArray : MonoBehaviour
             }
         }
     }
-
-    /*private void lockLastNode()
-    {
-        if (getLargestValue() == getLast())
-        {
-            transform.GetChild(Array.IndexOf(array, getLast())).GetComponent<Node>().setLocked(true);
-        }
-    }*/
 
     public int getLargestValue() //That is not locked
     {
