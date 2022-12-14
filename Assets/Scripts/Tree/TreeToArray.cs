@@ -11,7 +11,7 @@ public class TreeToArray : MonoBehaviour
     
     private int[] array;
     
-    
+
     //GameManager.instance.arry = array;
 
     private void Start()
@@ -23,8 +23,6 @@ public class TreeToArray : MonoBehaviour
     {
         UpdateArray();
         arrayAnzeige.GetComponent<TextMeshPro>().text = formatArray();
-
-       
     }
 
     private void UpdateArray()
@@ -96,7 +94,10 @@ public class TreeToArray : MonoBehaviour
 
         foreach (var item in array)
         {
-            text += item + " ";
+            if (item == 0)
+                text += "- ";
+            else
+                text += item + " ";
         }
         text = text.Remove(text.Length - 1);
         return text;
