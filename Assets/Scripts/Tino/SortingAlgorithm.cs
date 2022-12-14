@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -9,8 +10,9 @@ public class SortingAlgorithm : MonoBehaviour
     [SerializeField] private LevelController levelController;
     private TextMeshProUGUI textMeshProUGUI;
     private int laengeArray;
-    
-    
+    [SerializeField] private TreeToArray treeToArray;
+
+    private bool sortActive = true;
     //Heapsort
     public int[] SortArray(int[] array, int size)
     {
@@ -106,9 +108,14 @@ public class SortingAlgorithm : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.O))
+        if (sortActive)
         {
-            SortArray(levelController.getLevelArray(), levelController.getLevelArray().Length);
-        }        
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                SortArray(levelController.GetComponent<LevelController>().getArry(), levelController.GetComponent<LevelController>().getArry().Length);
+                sortActive = false;
+            }
+            
+        }
     }
 }
