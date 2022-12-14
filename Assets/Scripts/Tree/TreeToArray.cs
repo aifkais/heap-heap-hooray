@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using TMPro;
@@ -8,26 +9,38 @@ public class TreeToArray : MonoBehaviour
     [SerializeField] private GameObject gameController;
     [SerializeField] private GameObject arrayAnzeige;
     [SerializeField] private LevelController levelController;
-    private bool allPlaced = false;
     private int[] array;
+    private int[] rightWrong;
+    private bool setFirstArray;
     
-
-    //GameManager.instance.arry = array;
 
     private void Start()
     {
+        setFirstArray = true;
         array = new int[gameController.transform.GetComponent<LevelController>().getLevelArray().Length];
+        rightWrong = new int[gameController.transform.GetComponent<LevelController>().getLevelArray().Length];
     }
 
     private void Update()
     {
-        if (AllPlaced())
-        {
-            allPlaced = true;
-        }
-        
         UpdateArray();
         arrayAnzeige.GetComponent<TextMeshPro>().text = formatArray();
+
+        checkRightWrong();
+
+        if (getFree() == 1)
+        {
+            transform.GetChild(0).GetComponent<Node>().setLocked(true);
+        }
+
+        if (AllPlaced() && setFirstArray == true)
+        {
+            setFirstArray = false;
+            foreach (int item in array)
+            {
+                levelController.getArry()[Array.IndexOf(array, item)] = item;
+            }
+        }
     }
 
     private void UpdateArray()
@@ -38,6 +51,34 @@ public class TreeToArray : MonoBehaviour
             if (box)
             {
                 array[i] = box.GetComponent<Box>().getBoxValue();
+            }
+        }
+    }
+
+    private int getFree()
+    {
+        int counter = transform.childCount;
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            if (transform.GetChild(i).GetComponent<Node>().getLocked())
+            {
+                counter--;
+            }
+        }
+        return counter;
+    }
+
+    private void checkRightWrong()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            if (transform.GetChild(i).GetComponent<Node>().getLocked())
+            {
+                rightWrong[i] = 1;
+            }
+            else if (!transform.GetChild(i).GetComponent<Node>().getLocked())
+            {
+                rightWrong[i] = 0; 
             }
         }
     }
@@ -91,6 +132,11 @@ public class TreeToArray : MonoBehaviour
     public int[] getArray()
     {
         return array;
+    }
+
+    public int[] getRightWrong()
+    {
+        return rightWrong;
     }
 
     private String formatArray()

@@ -7,10 +7,15 @@ public class LevelController : MonoBehaviour
     [SerializeField] private int[] levelArray;
     [SerializeField] private int levelDialogueIndex;
 
-    public int[] arry;
+    [SerializeField] private int[] arry;
     public string txt = "";
     public char[] sortiertesArray;
     public string[] arrayAnzeige = new string[1000];
+
+    private void Start()
+    {
+        arry = new int[levelArray.Length];
+    }
 
     public int[] getLevelArray()
     {
@@ -25,5 +30,10 @@ public class LevelController : MonoBehaviour
     public void setArry(int[] arry)
     {
         this.arry = arry;
+    }
+
+    public int[] getArry()
+    {
+        return arry;
     }
 }

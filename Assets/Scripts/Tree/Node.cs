@@ -16,6 +16,11 @@ public class Node : MonoBehaviour
         {
             placedBox.transform.position = transform.position;
         }
+        if (locked)
+        {
+            GameObject label = placedBox.transform.GetChild(0).GetChild(0).GetChild(1).gameObject;
+            label.GetComponent<SpriteRenderer>().color = new Color(0.3910296f, 1f, 0.3820755f, 1f);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -27,6 +32,8 @@ public class Node : MonoBehaviour
             placedBox.transform.position = transform.position;
             placedBox.GetComponent<Box>().setShowBoxValue(true);
             placedBox.GetComponent<Box>().setPickUpAllowed(false);
+
+            //GameObject.Find("GameController").GetComponent<LevelController>().setArry(transform.parent.GetComponent<TreeToArray>().getArray());
         }
     }
 

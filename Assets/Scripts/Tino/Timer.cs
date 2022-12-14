@@ -40,7 +40,10 @@ public class Timer : MonoBehaviour
         {
             button.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
             if (Input.GetKeyDown(KeyCode.E))
+            {
                 timerActive = false;
+                button.GetComponent<Beenden>().beenden();
+            }
         }
         else
         {
