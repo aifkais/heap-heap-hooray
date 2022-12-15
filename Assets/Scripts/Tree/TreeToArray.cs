@@ -122,6 +122,16 @@ public class TreeToArray : MonoBehaviour
         return true;
     }
 
+    public bool AllLocked()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            if (transform.GetChild(i).GetComponent<Node>().getLocked() == false)
+                return false;
+        }
+        return true;
+    }
+
     public int getParent(float index)
     {
         return (int)Math.Floor((index - 1) / 2);
@@ -153,4 +163,41 @@ public class TreeToArray : MonoBehaviour
         text = text.Remove(text.Length - 1);
         return text;
     }
+
+    public bool isHeapified()
+    {
+        for (int i = array.Length -1 ; i > 0; i--)
+        {
+            if (transform.GetChild(i).GetComponent<Node>().getLocked() == false)
+                if (array[i] > array[getParent(i)])
+                    return false;
+        }
+        return true;
+    }
+
+    public void setArrayEmpty()
+    {
+        array = new int[gameController.transform.GetComponent<LevelController>().getLevelArray().Length];
+    }
+
+    //AUTO HEAP mit ANIMATION
+    /*IEnumerator sort()
+    {
+        int[] array = treeToArray.getArray();
+        while (!treeToArray.isHeapified())
+        {
+            for (int i = array.Length - 1; i > 0; i--)
+            {
+                if (treeController.transform.GetChild(i).GetComponent<Node>().getLocked() == false)
+                    if (array[i] > array[treeToArray.getParent(i)])
+                    {
+                        swap.select(treeController.transform.GetChild(i).gameObject);
+                        yield return new WaitForSeconds(0.5f);
+                        swap.select(treeController.transform.GetChild(treeToArray.getParent(i)).gameObject);
+                        //yield return new WaitUntil(() => swap.getInAnimation());
+                        yield return new WaitForSeconds(2f);
+                    }
+            }
+        }
+    }*/
 }

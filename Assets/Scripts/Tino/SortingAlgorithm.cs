@@ -13,6 +13,7 @@ public class SortingAlgorithm : MonoBehaviour
     [SerializeField] private TreeToArray treeToArray;
 
     private bool sortActive = true;
+    private int sortierschritt = 0;
     //Heapsort
     public int[] SortArray(int[] array, int size)
     {
@@ -41,9 +42,9 @@ public class SortingAlgorithm : MonoBehaviour
         
         for (int i = 0; i < levelController.sortiertesArray.Length/ laengeArray; i++)
         {
-           for(int j = 0; j < 7; j++)
+           for(int j = 0; j < laengeArray; j++)
             {
-                levelController.arrayAnzeige[i] = levelController.arrayAnzeige[i] + levelController.sortiertesArray[j + i * 7];
+                levelController.arrayAnzeige[i] = levelController.arrayAnzeige[i] + levelController.sortierung[j + i * laengeArray];
             }
         }
 
@@ -81,6 +82,8 @@ public class SortingAlgorithm : MonoBehaviour
         for(int i = 0; i<array1.Length; i++)
         {
             levelController.txt += array1[i];
+            levelController.sortierung[sortierschritt] = array1[i];
+            sortierschritt++;
         }
     }
 
@@ -110,12 +113,11 @@ public class SortingAlgorithm : MonoBehaviour
     {
         if (sortActive)
         {
-            if (Input.GetKeyDown(KeyCode.P))
+            if (treeToArray.AllPlaced())
             {
                 SortArray(levelController.GetComponent<LevelController>().getArry(), levelController.GetComponent<LevelController>().getArry().Length);
                 sortActive = false;
             }
-            
         }
     }
 }

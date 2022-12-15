@@ -10,19 +10,22 @@ public class Swap : MonoBehaviour
     private GameObject firstBox;
     private GameObject secondBox;
 
-
+    [SerializeField] private LevelController levelController;
+    private bool canSwap;
     private bool inAnimation = false;
     private int lastSwap = 0;
 
     private void Update()
     {
+        canSwap = levelController.getCanSwap();
         mouseSelect();
         swap();
 
-        showSelection(firstSelect);
-        showSelection(secondSelect);
-
-        
+        if (canSwap)
+        {
+            showSelection(firstSelect);
+            showSelection(secondSelect);
+        }
     }
 
     private bool checkRelation()
@@ -35,12 +38,12 @@ public class Swap : MonoBehaviour
         int firstIndex = Array.IndexOf(array, firstValue);
         int secondIndex = Array.IndexOf(array, secondValue);
 
-        if (firstValue == GetComponent<TreeToArray>().getLargestValue() && firstIndex == 0 && secondIndex == GetComponent<TreeToArray>().getLastIndex()) //erste und letzte
+        if (firstValue == GetComponent<TreeToArray>().getLargestValue() && firstIndex == 0 && secondIndex == GetComponent<TreeToArray>().getLastIndex() && GetComponent<TreeToArray>().isHeapified()) //erste und letzte
         {
             lastSwap = 1;
             return true;
         }
-        else if (secondValue == GetComponent<TreeToArray>().getLargestValue() && secondIndex == 0 && firstIndex == GetComponent<TreeToArray>().getLastIndex()) //erste und letzte
+        else if (secondValue == GetComponent<TreeToArray>().getLargestValue() && secondIndex == 0 && firstIndex == GetComponent<TreeToArray>().getLastIndex() && GetComponent<TreeToArray>().isHeapified()) //erste und letzte
         {
             lastSwap = 2;
             return true;
@@ -131,14 +134,14 @@ public class Swap : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector3.back, 100, ~LayerMask.NameToLayer("Node"));
             if (hit)
             {
-                if (hit.transform.GetComponent<Node>().hasPlacedBox() && !hit.transform.GetComponent<Node>().getLocked() && GetComponent<TreeToArray>().AllPlaced() && !inAnimation) 
+                if (canSwap && hit.transform.GetComponent<Node>().hasPlacedBox() && !hit.transform.GetComponent<Node>().getLocked() && GetComponent<TreeToArray>().AllPlaced() && !inAnimation) 
                     select(hit.transform.gameObject);
             }
         }
     }
 
     //Select & Deselect
-    private void select(GameObject Node) 
+    public void select(GameObject Node) 
     {
         if (firstSelect == Node)
             deselect();
@@ -168,5 +171,10 @@ public class Swap : MonoBehaviour
             secondSelect = null;
             //secondBox = null;
         }
+    }
+
+    public bool getInAnimation()
+    {
+        return inAnimation;
     }
 }

@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveInput;
 
     private PickUp pickUp;
+    private bool canMove = false;
+    private Transform currentIdleSpot;
 
     void Start()
     {
@@ -32,25 +34,62 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Animation
-        animator.SetFloat("Horizontal", moveInput.x);
-        animator.SetFloat("Vertical", moveInput.y);
+        if (canMove)
+        {
+            animator.SetFloat("Horizontal", moveInput.x);
+            animator.SetFloat("Vertical", moveInput.y);
+        }
     }
 
     void FixedUpdate()
     {
-        if (moveInput.x != 0 || moveInput.y != 0)
+        if (canMove)
         {
-            if (moveInput.x != 0 && moveInput.y != 0)
+            if (moveInput.x != 0 || moveInput.y != 0)
             {
-                moveInput.x *= speedLimiter;
-                moveInput.y *= speedLimiter;
+                if (moveInput.x != 0 && moveInput.y != 0)
+                {
+                    moveInput.x *= speedLimiter;
+                    moveInput.y *= speedLimiter;
+                }
+                rb.velocity = moveInput * moveSpeed;
             }
-            rb.velocity = moveInput * moveSpeed;
+            else
+            {
+                rb.velocity = new Vector2(0f, 0f);
+            }
         }
-        else
+    }
+
+    public Transform getIdleSpot()
+    {
+        //AutoAttackWeapon
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Walk_Right"))
         {
-            rb.velocity = new Vector2(0f, 0f);
+            currentIdleSpot = transform.Find("IdleSpots").Find("Right");
         }
+        else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Walk_Left"))
+        {
+            currentIdleSpot = transform.Find("IdleSpots").Find("Left");
+        }
+        else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Walk_Up"))
+        {
+            currentIdleSpot = transform.Find("IdleSpots").Find("Top");
+        }
+        else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Walk_Down"))
+        {
+            currentIdleSpot = transform.Find("IdleSpots").Find("Bottom");
+        }
+        else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Idle"))
+        {
+            currentIdleSpot = transform.Find("IdleSpots").Find("Bottom");
+        }
+        return currentIdleSpot;
+    }
+
+    public void setCanMove(bool canMove)
+    {
+        this.canMove = canMove;
     }
 }
 

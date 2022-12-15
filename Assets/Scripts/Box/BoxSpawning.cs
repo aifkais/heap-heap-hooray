@@ -13,12 +13,13 @@ public class BoxSpawning : MonoBehaviour
     [SerializeField] private GameObject gameController;
 
     [SerializeField] private GameObject timer;
+    [SerializeField] private Animator output;
 
     private float speed = 5f;
     private int[] unsortetdList;
     private GameObject currentBox;
 
-    void Start()
+    public void spawnBox()
     {
         unsortetdList = gameController.GetComponent<LevelController>().getLevelArray();
         StartCoroutine(InitiateSpawn());
@@ -26,6 +27,7 @@ public class BoxSpawning : MonoBehaviour
 
     IEnumerator InitiateSpawn()
     {
+        output.SetBool("Ausgabe", true);
         for (int i = 0; i < unsortetdList.Length; i++)
         {
             Instantiate(objectToSpawn, transform.position, objectToSpawn.transform.rotation, boxParent);
@@ -34,6 +36,7 @@ public class BoxSpawning : MonoBehaviour
             yield return StartCoroutine(SpawnBox(randomPoint()));
         }
         enablePickUp();
+        output.SetBool("Ausgabe", false);
         timer.GetComponent<Timer>().SetTimer(true);
     }
 

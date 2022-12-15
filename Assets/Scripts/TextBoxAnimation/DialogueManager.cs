@@ -14,67 +14,64 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] bool keyDown;
     [SerializeField] private LevelController levelController;
 
-    public int textIndex;
     public Dialogue [] textArray = new Dialogue [50];
-    
-
     private Queue<string> sentences;
-  
 
-  
-
-
-
-    // Start is called before the first frame update
-  void Start()
-    {
-        
-        sentences = new Queue<string>();
-        
-    }
+    private bool inDialogue = false;
   
   
    void Update() // loest die TextBoxen aus
     {
-        textIndex = levelController.getLevelDialogueIndex();
-
-        if (Input.GetAxis ("Jump")!=0){
-		    if(!keyDown&&animator.GetBool("IsOpen")==false){
-                StartDialogue(textIndex);
-		        keyDown = true;	  
-		    } 
-            else if(!keyDown&&animator.GetBool("IsOpen")==true){
+        if (Input.GetKey("space"))
+        {
+            if (!keyDown && animator.GetBool("IsOpen") == true)
+            {
                 DisplayNextSentence();
-                keyDown = true;	 
+                keyDown = true;
             }
         }
-        else {
-        keyDown= false;
+        else
+        {
+            keyDown = false;
         }
-}
-
-
-  public void StartDialogue(int textIndex) 
-  {
-    
-    animator.SetBool("IsOpen", true);
-
-    nameText.text = textArray[textIndex].npcName;
-
-    sentences.Clear();
-
-    foreach (string sentence in textArray[textIndex].sentences){
-      sentences.Enqueue(sentence);
     }
-    DisplayNextSentence();
-  }
- 
+
+    public void Open(int textIndex)
+    {
+        if (!keyDown && animator.GetBool("IsOpen") == false)
+        {
+            StartDialogue(textIndex);
+            keyDown = true;
+        }
+    }
+
+    public void newSentence()
+    {
+        sentences = new Queue<string>();
+    }
+
+    public void StartDialogue(int textIndex)
+    {
+        inDialogue = true;
+        animator.SetBool("IsOpen", true);
+
+        nameText.text = textArray[textIndex].npcName;
+
+        sentences.Clear();
+
+        foreach (string sentence in textArray[textIndex].sentences)
+        {
+            sentences.Enqueue(sentence);
+        }
+        DisplayNextSentence();
+    }
 
 
-  public void DisplayNextSentence(){
+
+    public void DisplayNextSentence(){
 
     if(sentences.Count == 0){
-    
+            inDialogue = false;
       EndDialogue();
       return;
     }
@@ -97,4 +94,9 @@ public class DialogueManager : MonoBehaviour
    
     
   }
+
+    public bool getInDialogue()
+    {
+        return inDialogue;
+    }
 }

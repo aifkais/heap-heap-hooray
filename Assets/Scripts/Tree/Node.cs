@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,8 +19,12 @@ public class Node : MonoBehaviour
         }
         if (locked)
         {
-            GameObject label = placedBox.transform.GetChild(0).GetChild(0).GetChild(1).gameObject;
-            label.GetComponent<SpriteRenderer>().color = new Color(0.3910296f, 1f, 0.3820755f, 1f);
+            try
+            {
+                GameObject label = placedBox.transform.GetChild(0).GetChild(0).GetChild(1).gameObject;
+                label.GetComponent<SpriteRenderer>().color = new Color(0.3910296f, 1f, 0.3820755f, 1f);
+            }
+            catch (Exception) { }
         }
     }
 

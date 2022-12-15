@@ -5,12 +5,15 @@ using UnityEngine;
 public class LevelController : MonoBehaviour
 {
     [SerializeField] private int[] levelArray;
-    [SerializeField] private int levelDialogueIndex;
+    [SerializeField] private bool canSwap;
 
     [SerializeField] private int[] arry;
     public string txt = "";
     public char[] sortiertesArray;
     public string[] arrayAnzeige = new string[1000];
+    public int[] sortierung = new int[1000];
+
+
 
     private void Start()
     {
@@ -22,11 +25,6 @@ public class LevelController : MonoBehaviour
         return levelArray;
     }
 
-    public int getLevelDialogueIndex()
-    {
-        return levelDialogueIndex;
-    }
-
     public void setArry(int[] arry)
     {
         this.arry = arry;
@@ -35,5 +33,15 @@ public class LevelController : MonoBehaviour
     public int[] getArry()
     {
         return arry;
+    }
+
+    public bool getCanSwap()
+    {
+        return canSwap;
+    }
+
+    public void setCanSwap(bool canSwap)
+    {
+        this.canSwap = canSwap;
     }
 }

@@ -10,10 +10,18 @@ public class PickUp : MonoBehaviour
     public LayerMask pickUpMask;
     private GameObject itemHolding;
 
-    private bool pickUpAllowed;
-
     void Update()
     {
+        holdSpot.position = GetComponent<PlayerMovement>().getIdleSpot().position;
+        if (holdSpot.position == transform.Find("IdleSpots").Find("Top").position && itemHolding) //wenn vorne
+        {
+            itemHolding.GetComponent<SpriteRenderer>().sortingOrder = 1;
+        } 
+        else if (itemHolding)
+        {
+            itemHolding.GetComponent<SpriteRenderer>().sortingOrder = 3;
+        }
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (itemHolding)
@@ -33,7 +41,7 @@ public class PickUp : MonoBehaviour
                 {
                     itemHolding = pickUpItem.gameObject;
                     itemHolding.transform.position = holdSpot.position;
-                    itemHolding.transform.parent = transform;
+                    itemHolding.transform.parent = transform.GetChild(0);
 
                     if (itemHolding.GetComponent<Rigidbody2D>())
                         itemHolding.GetComponent<Rigidbody2D>().simulated = false;
