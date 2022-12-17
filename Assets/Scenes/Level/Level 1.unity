@@ -1900,8 +1900,8 @@ MonoBehaviour:
   - {x: -0.119731426, y: 0.702602, z: 0}
   - {x: -0.036759138, y: 0.7039204, z: 0}
   m_ShapePathHash: -816300875
-  m_Mesh: {fileID: 1420634786}
-  m_InstanceId: 81774
+  m_Mesh: {fileID: 1446784557}
+  m_InstanceId: 42866
 --- !u!114 &302517609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10621,6 +10621,50 @@ Transform:
   m_Father: {fileID: 302517599}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1188518046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1188518048}
+  - component: {fileID: 1188518047}
+  m_Layer: 0
+  m_Name: Escape
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1188518047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188518046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04fbed9728774cd479754cdec2d4a34d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1188518048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188518046}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.08705634, y: 0.062791795, z: -0.005104962}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1197558389
 GameObject:
   m_ObjectHideFlags: 0
@@ -11330,7 +11374,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4545864489834732263, guid: 2f4627b907f030f498f61a5a294a32cc, type: 3}
   m_PrefabInstance: {fileID: 1385745314}
   m_PrefabAsset: {fileID: 0}
---- !u!43 &1420634786
+--- !u!43 &1446784557
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
