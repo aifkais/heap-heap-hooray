@@ -9,13 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2155823026992089644}
-  m_Layer: 20
+  m_Layer: 0
   m_Name: ValueSpot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2155823026992089644
 Transform:
   m_ObjectHideFlags: 0
@@ -28,8 +28,8 @@ Transform:
   m_LocalScale: {x: 1.0496484, y: 1.1818935, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2622058770509481977}
   - {fileID: 4709902907710839873}
+  - {fileID: 2622058770509481977}
   m_Father: {fileID: 8287423232254280049}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 4709902907710839873}
   - component: {fileID: 1765168224706838517}
   - component: {fileID: 5544498496679924938}
-  m_Layer: 20
+  m_Layer: 0
   m_Name: BoxValueText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2155823026992089644}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -111,7 +111,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 593151247
   m_SortingLayer: 2
-  m_SortingOrder: 4
+  m_SortingOrder: 3
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &5544498496679924938
 MonoBehaviour:
@@ -215,7 +215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4870385838255105767}
   - component: {fileID: 5494219015536188031}
-  m_Layer: 20
+  m_Layer: 0
   m_Name: Sprite2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2622058770509481977}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
 --- !u!212 &5494219015536188031
 SpriteRenderer:
@@ -298,7 +298,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2622058770509481977}
-  m_Layer: 20
+  m_Layer: 0
   m_Name: ValuePlate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -317,10 +317,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4870385838255105767}
   - {fileID: 7506635585270144186}
+  - {fileID: 4870385838255105767}
   m_Father: {fileID: 2155823026992089644}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8287423232254279948
 GameObject:
@@ -335,10 +335,9 @@ GameObject:
   - component: {fileID: 8287423232254280048}
   - component: {fileID: 6928661748058024521}
   - component: {fileID: 8287423232254280053}
-  - component: {fileID: 2968144304923748274}
   m_Layer: 20
   m_Name: Box
-  m_TagString: Box
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -379,7 +378,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -460,36 +459,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 440df81def5a9884facee3dfc6cb2e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2968144304923748274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8287423232254279948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_ComponentVersion: 1
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 1
-  m_ApplyToSortingLayers: 000000009988738f0fc55a238fb5be27
-  m_ShapePath:
-  - {x: -0.23767309, y: -0.15520112, z: 0}
-  - {x: -0.23481517, y: 0.122745186, z: 0}
-  - {x: -0.04637815, y: 0.31432346, z: 0}
-  - {x: -0.0029858164, y: 0.31819516, z: 0}
-  - {x: 0.2771674, y: 0.13283706, z: 0}
-  - {x: 0.28158143, y: -0.11812156, z: 0}
-  - {x: 0.08351606, y: -0.3160318, z: 0}
-  m_ShapePathHash: 1494268449
-  m_Mesh: {fileID: 0}
-  m_InstanceId: 28520
 --- !u!1 &9090404924606081437
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,7 +469,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7506635585270144186}
   - component: {fileID: 1620450444197196948}
-  m_Layer: 20
+  m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,7 +489,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2622058770509481977}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1620450444197196948
 SpriteRenderer:

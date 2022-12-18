@@ -10,7 +10,7 @@ public class TextBoxTrigger : MonoBehaviour
     public Animator animator;
     public GameObject [] Texte;
     public DialogueTrigger dialogueTrigger;
-    public int textIndex =0;
+    public int textIndex = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -23,16 +23,16 @@ public class TextBoxTrigger : MonoBehaviour
     {
         
         if(Input.GetAxis ("Jump")!=0){
-		    if(!keyDown&&animator.GetBool("IsOpen")==false){
-                Debug.Log("!h");
-            FindObjectOfType<DialogueManager>().StartDialogue(textIndex);
-		    keyDown = true;	  
-		    }
-        }
+		    if(!keyDown){
 
+            
+            FindObjectOfType<DialogueManager>().StartDialogue(textIndex);
         
-        else {
-        keyDown= false;
+		    keyDown = true;	
+        
+		    }
+        }else {
+            keyDown= false;
         }
 }
 
