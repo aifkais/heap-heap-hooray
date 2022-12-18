@@ -13,6 +13,7 @@ public class SortingAlgorithm : MonoBehaviour
     [SerializeField] private TreeToArray treeToArray;
 
     private bool sortActive = true;
+    private int sortierschritt = 0;
     //Heapsort
     public int[] SortArray(int[] array, int size)
     {
@@ -43,7 +44,8 @@ public class SortingAlgorithm : MonoBehaviour
         {
            for(int j = 0; j < 7; j++)
             {
-                levelController.arrayAnzeige[i] = levelController.arrayAnzeige[i] + levelController.sortiertesArray[j + i * 7];
+                levelController.arrayAnzeige[i] = levelController.arrayAnzeige[i] + levelController.sortiertesArray[j + i * laengeArray];
+                levelController.arrayAnzeige2[i] = levelController.arrayAnzeige2[i] + levelController.sortierung[j + i * laengeArray];
             }
         }
 
@@ -81,6 +83,8 @@ public class SortingAlgorithm : MonoBehaviour
         for(int i = 0; i<array1.Length; i++)
         {
             levelController.txt += array1[i];
+            levelController.sortierung[sortierschritt] = array1[i];
+            sortierschritt++;
         }
     }
 
@@ -97,6 +101,7 @@ public class SortingAlgorithm : MonoBehaviour
             }
         }
     }
+
 
     // Start is called before the first frame update
     void Start()

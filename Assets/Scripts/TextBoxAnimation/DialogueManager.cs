@@ -30,7 +30,7 @@ public class DialogueManager : MonoBehaviour
     {
         
         sentences = new Queue<string>();
-        
+        StartDialogue(textIndex);           //Tino
     }
   
   
@@ -38,12 +38,15 @@ public class DialogueManager : MonoBehaviour
     {
         textIndex = levelController.getLevelDialogueIndex();
 
-        if (Input.GetAxis ("Jump")!=0){
-		    if(!keyDown&&animator.GetBool("IsOpen")==false){
+        if (Input.GetAxis ("Jump")!=0)
+        {
+		    if(!keyDown&&animator.GetBool("IsOpen")==false)
+            {
                 StartDialogue(textIndex);
 		        keyDown = true;	  
 		    } 
-            else if(!keyDown&&animator.GetBool("IsOpen")==true){
+            else if(!keyDown&&animator.GetBool("IsOpen")==true)
+            {
                 DisplayNextSentence();
                 keyDown = true;	 
             }
@@ -51,7 +54,7 @@ public class DialogueManager : MonoBehaviour
         else {
         keyDown= false;
         }
-}
+    }
 
 
   public void StartDialogue(int textIndex) 

@@ -10,7 +10,10 @@ public class LevelController : MonoBehaviour
     [SerializeField] private int[] arry;
     public string txt = "";
     public char[] sortiertesArray;
-    public string[] arrayAnzeige = new string[1000];
+    public string[] arrayAnzeige = new string[40];
+
+    public int[] sortierung = new int[1000];
+    public string[] arrayAnzeige2 = new string[40];
 
     private void Start()
     {
