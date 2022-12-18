@@ -19,7 +19,7 @@ public class Timer : MonoBehaviour
     }
     void Start()
     {
-        TimerText.GetComponent<TextMeshPro>().text = "00:00.0";
+        TimerText.GetComponent<TextMeshPro>().text = timeMin.ToString(@"00\:") + timeSec.ToString(@"00.0");
     }
 
     // Update is called once per frame
